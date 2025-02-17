@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksam_mccathie_github_io=self.webpackChunksam_mccathie_github_io||[]).push([[691],{7200:function(e,t,a){a.r(t),a.d(t,{Head:function(){return l}});var n=a(4160),c=a(7294);t.default=()=>c.createElement("main",null,c.createElement("h1",null,"Home Page"),c.createElement(n.rU,{to:"/test"},"Go home"),".");const l=()=>c.createElement("title",null,"Home Page")}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-df3df266afc529ac0750.js.map
