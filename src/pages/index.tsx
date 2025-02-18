@@ -12,10 +12,11 @@ const IndexPage = () => {
     <main>
       <h1>Home</h1>
       <Button
-        // text="test"
         onClick={handleClick}
         svg={<LinkedInSVG ariaLabel="testing label" />}
       />
+
+      <Button text="Test" onClick={handleClick} />
     </main>
   );
 };

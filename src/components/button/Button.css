@@ -21,10 +21,12 @@ button {
 
   &:has(svg) {
     padding: 4px;
+    height: fit-content;
   }
 }
 
 button .icon {
   fill: blue;
   width: 24px;
+  vertical-align: middle;
 }
