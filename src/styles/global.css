@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 :root {
   /* Default Tokens */
   --primary-color: var(--dark-grey);
@@ -6,6 +8,7 @@
 
   /* Colors */
   --off-white: #faf9f6;
+  --grey: #c4c4c4;
   --dark-grey: #2c2c2c;
   --charcoal: #242424;
   --darkest-grey: #1c1c1c;
@@ -22,10 +25,11 @@ h1 {
   margin: 0;
 }
 
-p,
 h1,
 h2,
-h3 {
+h3,
+p,
+button {
   color: var(--primary-color);
 }
 
