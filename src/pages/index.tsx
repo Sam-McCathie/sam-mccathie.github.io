@@ -1,6 +1,7 @@
 import { type HeadFC } from "gatsby";
 import * as React from "react";
 import { Button } from "../components";
+import { LinkedInSVG } from "../images";
 
 const IndexPage = () => {
   const handleClick = () => {
@@ -10,7 +11,10 @@ const IndexPage = () => {
   return (
     <main>
       <h1>Home</h1>
-      <Button text="Test" onClick={handleClick} />
+      <Button
+        onClick={handleClick}
+        svg={<LinkedInSVG ariaLabel="testing label" />}
+      />
     </main>
   );
 };
