@@ -1,6 +1,5 @@
 import { type HeadFC } from "gatsby";
 import * as React from "react";
-import "../styles/index.css";
 
 const IndexPage = () => {
   return (
