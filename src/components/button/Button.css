@@ -19,3 +19,8 @@ button {
     background-color: var(--grey);
   }
 }
+
+button .icon {
+  fill: blue;
+  width: 24px;
+}
