@@ -4,6 +4,7 @@
   "private": true,
   "description": "sam-mccathie.github.io",
   "author": "Sam McCathie",
+  "type": "module",
   "keywords": [
     "gatsby"
   ],
@@ -13,6 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build && gh-pages -d public",
+    "lint": "eslint . && stylelint '**/*.css'",
+    "lint:fix": "eslint . --fix && stylelint '**/*.css' --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -21,10 +24,19 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "gh-pages": "^6.3.0",
+    "prettier": "^3.5.1",
+    "stylelint": "^16.14.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.3.3"
   }
 }

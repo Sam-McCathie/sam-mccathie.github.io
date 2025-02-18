@@ -31,5 +31,6 @@ h3 {
 
 main {
   background: var(--gradient-background);
+
   min-height: 100vh;
 }
