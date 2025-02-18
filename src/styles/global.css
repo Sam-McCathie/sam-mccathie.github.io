@@ -1,0 +1,35 @@
+:root {
+  /* Default Tokens */
+  --primary-color: var(--dark-grey);
+  --background-color: var(--gradient-background);
+  --element-background-color: var(--off-white);
+
+  /* Colors */
+  --off-white: #faf9f6;
+  --dark-grey: #2c2c2c;
+  --charcoal: #242424;
+  --darkest-grey: #1c1c1c;
+  --gradient-primary: var(--off-white);
+  --gradient-secondary: #d1e9f6;
+  --gradient-background: linear-gradient(
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+main {
+  background: var(--gradient-background);
+  min-height: 100vh;
+}
