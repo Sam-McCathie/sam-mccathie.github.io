@@ -18,6 +18,10 @@ button {
   &:disabled {
     background-color: var(--grey);
   }
+
+  &:has(svg) {
+    padding: 4px;
+  }
 }
 
 button .icon {
