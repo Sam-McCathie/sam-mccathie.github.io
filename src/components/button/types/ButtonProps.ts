@@ -5,7 +5,8 @@ interface BaseButtonProps {
 
 /**
  * Props for Button component when text is used.
- * @property {never} [svg] - SVG should not be provided when text is used.
+ * @property {never} [svg]
+ * @property {never} [ariaLabel]
  */
 interface ButtonTextProps extends BaseButtonProps {
   text: string;

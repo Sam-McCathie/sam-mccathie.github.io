@@ -3,8 +3,12 @@
 :root {
   /* Default Tokens */
   --primary-color: var(--dark-grey);
-  --background-color: var(--gradient-background);
+  --disabled-colour: var(--grey);
   --element-background-color: var(--off-white);
+  --gradient-background: linear-gradient(
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
 
   /* Colors */
   --off-white: #faf9f6;
@@ -14,10 +18,6 @@
   --darkest-grey: #1c1c1c;
   --gradient-primary: var(--off-white);
   --gradient-secondary: #d1e9f6;
-  --gradient-background: linear-gradient(
-    var(--gradient-primary),
-    var(--gradient-secondary)
-  );
 }
 
 body,
