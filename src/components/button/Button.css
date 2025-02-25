@@ -4,8 +4,8 @@ button {
   border-radius: 10px;
   padding: 4px 16px;
   font: 500 16px/1.5 "Ubuntu", sans-serif;
-
   cursor: pointer;
+  transition: var(--default-transition);
 
   &:not(:disabled):is(:hover, :active) {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

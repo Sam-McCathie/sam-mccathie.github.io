@@ -18,6 +18,9 @@
   --darkest-grey: #1c1c1c;
   --gradient-primary: var(--off-white);
   --gradient-secondary: #d1e9f6;
+
+  /* Animations */
+  --default-transition: all 0.5s ease;
 }
 
 body,
