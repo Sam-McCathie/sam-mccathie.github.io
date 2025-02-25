@@ -2,10 +2,13 @@ import { type HeadFC } from "gatsby";
 import * as React from "react";
 import { Button } from "../components";
 import { LinkedInSVG } from "../images";
+import { useTheme } from "../context";
 
 const IndexPage = () => {
+  // const { theme } = useTheme();
+
   const handleClick = () => {
-    console.log("Skrrt");
+    // console.log(theme);
   };
 
   return (
