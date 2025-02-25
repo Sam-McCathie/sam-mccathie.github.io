@@ -13,7 +13,7 @@ const IndexPage = () => {
       <h1>Home</h1>
       <Button
         onClick={handleClick}
-        svg={<LinkedInSVG ariaLabel="testing label" />}
+        svg={<LinkedInSVG ariaLabel="testing label" className="linked-in" />}
       />
 
       <Button text="Test" onClick={handleClick} />

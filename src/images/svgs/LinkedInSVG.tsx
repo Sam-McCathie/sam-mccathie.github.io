@@ -2,9 +2,12 @@ import * as React from "react";
 import { SVG } from "../../types";
 
 export const LinkedInSVG: React.FC<SVG> = ({ ariaLabel, className }) => {
+  let svgClass = "icon";
+  if (className) svgClass += ` ${className}`;
+
   return (
     <svg
-      className={`icon${className ? ` ${className}` : ""}`}
+      className={svgClass}
       aria-label={ariaLabel}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
