@@ -1,0 +1,32 @@
+button {
+  background-color: var(--element-background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 4px 16px;
+  font: 500 16px/1.5 "Ubuntu", sans-serif;
+  cursor: pointer;
+  transition: var(--default-transition);
+
+  &:not(:disabled):is(:hover, :active) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:not(:disabled):active {
+    outline: 2px solid var(--primary-color);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-colour);
+  }
+
+  &:has(svg) {
+    padding: 4px;
+    height: fit-content;
+  }
+}
+
+button .icon {
+  fill: blue;
+  width: 24px;
+  vertical-align: middle;
+}
