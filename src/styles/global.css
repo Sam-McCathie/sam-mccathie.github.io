@@ -1,26 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 :root {
-  /* Default Tokens */
-  --primary-color: var(--dark-grey);
-  --disabled-colour: var(--grey);
-  --element-background-color: var(--off-white);
-  --gradient-background: linear-gradient(
-    var(--gradient-primary),
-    var(--gradient-secondary)
-  );
-
   /* Colors */
   --off-white: #faf9f6;
   --grey: #c4c4c4;
   --dark-grey: #2c2c2c;
   --charcoal: #242424;
   --darkest-grey: #1c1c1c;
+  --gradient: linear-gradient(
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
   --gradient-primary: var(--off-white);
   --gradient-secondary: #d1e9f6;
 
   /* Animations */
   --default-transition: all 0.5s ease;
+}
+
+/* light mode */
+main.light {
+  --primary-color: var(--dark-grey);
+  --disabled-colour: var(--grey);
+  --element-background-color: var(--off-white);
+  /* TODO:
+  * - the gradient colour doesn't transition, it works fine if it is a solid colour, look into fix.
+  */
+  --main-background-color: var(--gradient);
+}
+
+/* dark mode */
+main.dark {
+  --primary-color: var(--off-white);
+  --disabled-colour: var(--grey);
+  --element-background-color: var(--darkest-grey);
+  --main-background-color: var(--darkest-grey);
+}
+
+main {
+  background: var(--main-background-color);
+  min-height: 100vh;
+  transition: var(--default-transition);
 }
 
 body,
@@ -34,9 +54,5 @@ h3,
 p,
 button {
   color: var(--primary-color);
-}
-
-main {
-  background: var(--gradient-background);
-  min-height: 100vh;
+  transition: var(--default-transition);
 }
