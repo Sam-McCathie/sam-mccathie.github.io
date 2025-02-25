@@ -10,9 +10,10 @@ export const Button: React.FC<ButtonProps> = ({
   text,
   svg,
   className,
+  ariaLabel,
 }) => {
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} aria-label={ariaLabel}>
       {text}
       {svg}
     </button>

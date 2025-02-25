@@ -1,7 +1,7 @@
 import * as React from "react";
-import { SVG } from "../../types";
+import { ISVG } from "./types";
 
-export const LinkedInSVG: React.FC<SVG> = ({ ariaLabel, className }) => {
+export const LinkedInSVG: React.FC<ISVG> = ({ ariaLabel, className }) => {
   let svgClass = "icon";
   if (className) svgClass += ` ${className}`;
 
