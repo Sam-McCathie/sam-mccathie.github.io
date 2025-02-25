@@ -1,24 +1,17 @@
 import { type HeadFC } from "gatsby";
 import * as React from "react";
-import { Button } from "../components";
-import { LinkedInSVG } from "../images";
+import { Home } from "../components/home/Home";
+import { ThemeProvider } from "../context";
 
 const IndexPage = () => {
-  const handleClick = () => {
-    console.log("Skrrt");
-  };
+  /* For some reason, I cannot pass the provider in gatsby-browser, it should work but it doesn't :(
+   * Will revist this later.
+   */
 
   return (
-    <main>
-      <h1>Home</h1>
-      <Button
-        onClick={handleClick}
-        ariaLabel={"testing label"}
-        svg={<LinkedInSVG className="linked-in" />}
-      />
-
-      <Button text="Test" onClick={handleClick} />
-    </main>
+    <ThemeProvider>
+      <Home />
+    </ThemeProvider>
   );
 };
 
