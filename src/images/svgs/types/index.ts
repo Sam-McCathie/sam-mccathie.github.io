@@ -1,1 +1,0 @@
-export { ISVG } from "./svg";
