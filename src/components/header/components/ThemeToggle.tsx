@@ -11,6 +11,7 @@ export const ThemeToggle = () => {
     return (
       <Button
         svg={<SunSVG />}
+        className="theme-toggle"
         ariaLabel="Current mode: Light"
         onClick={toggleTheme}
       />
@@ -20,6 +21,7 @@ export const ThemeToggle = () => {
   return (
     <Button
       svg={<MoonSVG />}
+      className="theme-toggle"
       ariaLabel="Current mode: Dark"
       onClick={toggleTheme}
     />

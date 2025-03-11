@@ -27,6 +27,7 @@ main.light {
   * - the gradient colour doesn't transition, it works fine if it is a solid colour, look into fix.
   */
   --main-background-color: var(--gradient);
+  --drop-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 /* dark mode */
@@ -35,12 +36,15 @@ main.dark {
   --disabled-colour: var(--grey);
   --element-background-color: var(--darkest-grey);
   --main-background-color: var(--darkest-grey);
+  --drop-shadow-color: rgb(238, 238, 238, 0.25);
 }
 
 main {
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
+  padding-inline: 32px;
+  padding-top: 16px;
 }
 
 body,
@@ -54,6 +58,7 @@ h4 {
 h1,
 h2,
 h3,
+h4,
 p,
 button {
   color: var(--primary-color);

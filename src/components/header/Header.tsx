@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeToggle } from "./components";
 import { NavButtons } from "./components/NavButtons";
+import "./Header.css";
 
 export const Header = () => {
   return (
