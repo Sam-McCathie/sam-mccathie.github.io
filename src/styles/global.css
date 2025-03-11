@@ -21,7 +21,6 @@
 /* light mode */
 main.light {
   --primary-color: var(--dark-grey);
-  --disabled-colour: var(--grey);
   --element-background-color: var(--off-white);
   /* TODO:
   * - the gradient colour doesn't transition, it works fine if it is a solid colour, look into fix.
@@ -33,13 +32,13 @@ main.light {
 /* dark mode */
 main.dark {
   --primary-color: var(--off-white);
-  --disabled-colour: var(--grey);
   --element-background-color: var(--darkest-grey);
   --main-background-color: var(--darkest-grey);
   --drop-shadow-color: rgb(238, 238, 238, 0.25);
 }
 
 main {
+  --disabled-color: var(--grey);
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
