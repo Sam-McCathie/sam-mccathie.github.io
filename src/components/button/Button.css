@@ -8,7 +8,7 @@ button {
   transition: var(--default-transition);
 
   &:not(:disabled):is(:hover, :active) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--drop-shadow-color);
   }
 
   &:not(:disabled):active {
@@ -25,8 +25,12 @@ button {
   }
 }
 
-button .icon {
+button svg {
   fill: blue;
   width: 24px;
   vertical-align: middle;
+}
+
+button:has(svg) {
+  border-radius: 50%;
 }
