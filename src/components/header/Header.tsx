@@ -2,8 +2,8 @@ import React from "react";
 import { ThemeToggle } from "./components";
 import { NavButtons } from "./components/NavButtons";
 import "./Header.css";
-import { HamburgerSVG } from "../../images";
 import { Button } from "../button";
+import { HamburgerSVG } from "@svgs";
 
 export const Header = () => {
   // TODO: Add scrolling from clicking, h4 and nav buttons.
