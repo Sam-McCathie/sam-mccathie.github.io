@@ -1,5 +1,6 @@
 interface BaseButtonProps {
   onClick: () => void;
+  ariaLabel: string;
   className?: string;
 }
 
@@ -11,7 +12,6 @@ interface BaseButtonProps {
 interface ButtonTextProps extends BaseButtonProps {
   text: string;
   svg?: never;
-  ariaLabel?: string;
 }
 
 /**
@@ -21,7 +21,6 @@ interface ButtonTextProps extends BaseButtonProps {
 interface ButtonSvgProps extends BaseButtonProps {
   text?: never;
   svg: React.ReactNode;
-  ariaLabel: string;
 }
 
 export type ButtonProps = ButtonTextProps | ButtonSvgProps;

@@ -1,2 +1,1 @@
-export { LinkedInSVG } from "./svgs";
-export { SunSVG } from "./svgs";
+export { LinkedInSVG, SunSVG, MoonSVG, HamburgerSVG } from "./svgs";

@@ -9,7 +9,11 @@ header {
   transition: var(--default-transition);
 }
 
-header h4 {
+header .hamburger {
+  display: none;
+}
+
+header .home {
   margin-block: 16px;
   font: 700 24px/1.5 "Ubuntu", sans-serif;
   margin-right: auto;
@@ -23,4 +27,33 @@ header .nav-buttons {
 
 header .theme-toggle {
   margin-left: 8px;
+}
+
+@media (max-width: 872px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header .hamburger {
+    display: block;
+
+    & svg {
+      width: 25px;
+    }
+  }
+
+  header .home {
+    margin-right: 0;
+    margin-block: 4px;
+  }
+
+  header .nav-buttons {
+    display: none;
+  }
+}
+
+@media (max-width: 679px) {
+  header .theme-toggle {
+    display: none;
+  }
 }
