@@ -1,7 +1,7 @@
 button {
   background-color: var(--element-background-color);
   border: none;
-  border-radius: 0.75;
+  border-radius: 0.75rem;
   padding: 0.25rem 1rem;
   font: 500 1rem/1.5 "Ubuntu", sans-serif;
   cursor: pointer;
