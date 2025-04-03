@@ -1,6 +1,6 @@
 import React from "react";
-import { useTheme } from "../../context";
-import { Header } from "../header";
+import { useTheme } from "@context";
+import { Header } from "@components";
 
 // TODO: Move this to a components folder under pages
 export const Home = () => {

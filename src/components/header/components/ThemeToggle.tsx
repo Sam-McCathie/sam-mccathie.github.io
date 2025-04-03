@@ -1,7 +1,7 @@
 import React from "react";
-import { useTheme } from "../../../context";
-import { MoonSVG, SunSVG } from "../../../images";
-import { Button } from "../../button";
+import { useTheme } from "@context";
+import { Button } from "@components";
+import { MoonSVG, SunSVG } from "@svgs";
 
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
