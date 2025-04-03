@@ -1,0 +1,12 @@
+.profile .frame {
+  width: 223px;
+  height: 277px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  & img {
+    margin-left: -29px;
+    margin-top: -60px;
+    width: 284px;
+  }
+}
