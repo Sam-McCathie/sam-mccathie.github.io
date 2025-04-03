@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { type HeadFC } from "gatsby";
 import { ThemeProvider } from "@context";
 import { Home } from "./components";
