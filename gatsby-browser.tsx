@@ -1,5 +1,6 @@
 import "./src/styles/global.css";
 
+// @ts-ignore
 export const wrapRootElement = ({ children }) => {
   return children;
 };

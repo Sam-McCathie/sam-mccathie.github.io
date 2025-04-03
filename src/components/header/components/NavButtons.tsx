@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../button";
+import { Button } from "@components";
 
 export const NavButtons = () => {
   const handleScroll = (text: string) => () => {

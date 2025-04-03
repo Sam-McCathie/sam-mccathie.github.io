@@ -42,8 +42,8 @@ main {
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
-  padding-inline: 32px;
-  padding-top: 16px;
+  padding-inline: 2rem;
+  padding-top: 1rem;
 }
 
 body,

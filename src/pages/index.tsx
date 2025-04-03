@@ -1,7 +1,7 @@
-import { type HeadFC } from "gatsby";
 import * as React from "react";
-import { Home } from "../components/home/Home";
-import { ThemeProvider } from "../context";
+import { type HeadFC } from "gatsby";
+import { ThemeProvider } from "@context";
+import { Home } from "./components";
 
 const IndexPage = () => {
   /* For some reason, I cannot pass the provider in gatsby-browser, it should work but it doesn't :(
