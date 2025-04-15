@@ -20,16 +20,6 @@ export const LogoLinks = () => {
         <GitHubSVG />
       </a>
       <Button
-        svg={<LinkedInSVG />}
-        ariaLabel="Open LinkedIn"
-        onClick={() => alert("LinkedIn clicked")}
-      />
-      <Button
-        svg={<GitHubSVG />}
-        ariaLabel="Open GitHub"
-        onClick={() => alert("GitHub clicked")}
-      />
-      <Button
         svg={<EmailSVG />}
         ariaLabel="Open EmailSVG"
         onClick={() => alert("Email clicked")}
