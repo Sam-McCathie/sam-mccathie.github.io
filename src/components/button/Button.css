@@ -1,4 +1,6 @@
-button {
+/* anchor tag styling added for case where button and <a> are side by side and I want the styles to carry over */
+button,
+a:has(svg) {
   background-color: var(--element-background-color);
   border: none;
   border-radius: 0.75rem;
@@ -25,12 +27,13 @@ button {
   }
 }
 
-button svg {
-  fill: blue;
+button svg,
+a svg {
   width: 1.5rem;
   vertical-align: middle;
 }
 
-button:has(svg) {
+button:has(svg),
+a:has(svg) {
   border-radius: 50%;
 }

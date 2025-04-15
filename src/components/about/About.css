@@ -1,4 +1,30 @@
-.profile .frame {
+.about {
+  margin-inline: var(--body-margin);
+}
+
+.about .headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h1 {
+    font: 700 4rem/1.5 "Space Grotesk", sans-serif;
+    max-width: 350px;
+  }
+}
+
+.about .profile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.about .profile .logo-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about .profile .frame {
   width: 223px;
   height: 277px;
   overflow: hidden;
