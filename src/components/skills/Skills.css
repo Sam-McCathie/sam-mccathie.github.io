@@ -1,0 +1,36 @@
+.skill-icon {
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  transition: var(--default-transition);
+  overflow: hidden;
+}
+
+.skill-icon:hover span {
+  bottom: 50%;
+  transform: translateY(50%);
+  transition: var(--default-transition);
+}
+
+.skill-icon:hover svg {
+  top: -60px;
+  transition: var(--default-transition);
+}
+
+.skill-icon svg {
+  width: 3.5rem;
+  top: 4px;
+  position: absolute;
+  transition: var(--default-transition);
+}
+
+.skill-icon span {
+  position: absolute;
+  font: 500 0.75rem/1.5 "Ubuntu", sans-serif;
+  bottom: -20px;
+  transition: var(--default-transition);
+}
