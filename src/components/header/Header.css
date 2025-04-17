@@ -1,60 +1,76 @@
 header {
   display: flex;
-  align-items: center;
+  justify-content: center;
   border-radius: 3.125rem;
-  padding-inline: 2rem;
+  padding: 0.25rem 1rem;
   background-color: var(--element-background-color);
   box-shadow: 0 -1px 1px var(--drop-shadow-color),
     0 4px 4px var(--drop-shadow-color);
   transition: var(--default-transition);
 }
 
-header .hamburger {
-  display: none;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
 }
 
-header .home {
-  margin-block: 1rem;
-  font: 700 1.5rem/1.5 "Ubuntu", sans-serif;
-  margin-right: auto;
+.header-content .hamburger {
+  stroke: var(--primary-color);
+}
+
+/* rename from home*/
+.header-content .home {
+  padding: 0.25rem 0.5rem;
+  margin-right: -0.25rem;
+  font: 700 1rem/1.5 "Ubuntu", sans-serif;
   cursor: pointer;
 }
 
-header .nav-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
+.header-content .nav-buttons {
+  display: none;
 
-header .theme-toggle {
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 872px) {
-  header {
-    justify-content: space-between;
+  & button {
+    font-weight: 600;
   }
+}
 
-  /* TODO: fix alignment bug */
-  header .hamburger {
+.header-content .theme-toggle {
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .header-content .theme-toggle {
     display: block;
-
-    & svg {
-      width: 1.5rem;
-    }
   }
 
-  header .home {
+  .header-content svg {
+    width: 1.5625rem;
+  }
+
+  .header-content .home {
+    font-size: 1.5rem;
     margin-right: 0;
-    margin-block: 0.25rem;
-  }
-
-  header .nav-buttons {
-    display: none;
   }
 }
 
-@media (max-width: 679px) {
-  header .theme-toggle {
+@media (min-width: 768px) {
+  .header-content .hamburger {
     display: none;
+  }
+
+  .header-content .nav-buttons {
+    display: flex;
+  }
+
+  /* negative margin to improve alignment on larger breakpoints */
+  .header-content .home {
+    margin-left: -0.25rem;
+  }
+
+  .header-content .theme-toggle {
+    margin-right: -0.25rem;
   }
 }
