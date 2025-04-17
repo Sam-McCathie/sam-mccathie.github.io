@@ -22,8 +22,7 @@ a:has(svg) {
   }
 
   &:has(svg) {
-    padding: 0.25rem;
-    height: fit-content;
+    padding: 0;
   }
 }
 
@@ -33,7 +32,13 @@ a svg {
   vertical-align: middle;
 }
 
+/* Setting height and width to avoid svg h/w bug */
 button:has(svg),
 a:has(svg) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
 }
