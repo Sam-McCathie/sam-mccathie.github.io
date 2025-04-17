@@ -15,9 +15,6 @@
 
   /* Animations */
   --default-transition: all 0.5s ease;
-
-  /* Margins */
-  --body-margin: 15.625rem;
 }
 
 /* light mode */
@@ -44,8 +41,14 @@ main {
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-top: 1rem;
+}
+
+/* Add footer to exceptions */
+main > *:not(header) {
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 body,
@@ -75,8 +78,8 @@ svg {
   fill: var(--primary-color);
 }
 
-@media (max-width: 1199px) {
-  :root {
-    --body-margin: 0rem;
+@media (min-width: 768px) {
+  main {
+    padding-inline: 2rem;
   }
 }

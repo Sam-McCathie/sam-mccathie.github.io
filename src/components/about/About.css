@@ -4,29 +4,35 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-inline: var(--body-margin);
+}
+
+.about :is(.headline, .profile) {
+  display: flex;
+  flex-direction: column;
 }
 
 .about .headline {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   & h1 {
-    font: 700 4rem/1.5 "Space Grotesk", sans-serif;
-    max-width: 350px;
+    font: 700 3rem/1.5 "Space Grotesk", sans-serif;
+    text-align: center;
+    max-width: 350px; /* covers all breakpoints */
   }
 }
 
 .about .profile {
-  display: flex;
   gap: 1rem;
   align-items: center;
+  flex-direction: column-reverse;
 }
 
 .about .profile .logo-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
+  width: var(--profile-width);
 
   & a,
   button {
@@ -51,29 +57,32 @@
   }
 }
 
-@media (max-width: 680px) {
-  .about :is(.headline, .profile) {
-    flex-direction: column;
-  }
-
-  .about h1 {
-    font-size: 3.5rem !important;
-    text-align: center;
-  }
-
-  .about .profile {
-    flex-direction: column-reverse;
-  }
-
-  .about .profile .logo-links {
-    flex-direction: row;
-    width: var(--profile-width);
-    justify-content: space-between;
+@media (min-width: 540px) {
+  .about .headline h1 {
+    font-size: 3.5rem;
   }
 }
 
-@media (max-width: 320px) {
-  .about h1 {
-    font-size: 3rem !important;
+@media (min-width: 768px) {
+  .about {
+    gap: 2rem;
+  }
+
+  .about .profile,
+  .about .headline {
+    flex-direction: row;
+  }
+
+  .about .headline h1 {
+    text-align: start;
+    font-size: 4rem;
+  }
+
+  .about .profile .logo-links {
+    flex-direction: column;
+  }
+
+  .about .profile .logo-links {
+    width: fit-content;
   }
 }

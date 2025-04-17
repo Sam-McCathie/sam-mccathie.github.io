@@ -34,6 +34,7 @@ header .theme-toggle {
     justify-content: space-between;
   }
 
+  /* TODO: fix alignment bug */
   header .hamburger {
     display: block;
 
