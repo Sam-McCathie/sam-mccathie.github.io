@@ -37,7 +37,9 @@ main.dark {
 }
 
 main {
-  --disabled-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
