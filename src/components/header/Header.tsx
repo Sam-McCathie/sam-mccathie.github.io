@@ -5,7 +5,7 @@ import { NavButtons, ThemeToggle } from "./components";
 import "./Header.css";
 
 export const Header = () => {
-  // TODO: Add scrolling from clicking, h4 and nav buttons.
+  // TODO: Add scrolling from clicking nav buttons.
   return (
     <header>
       <div className="header-content">
@@ -18,7 +18,7 @@ export const Header = () => {
         <Button
           text="Sam McCathie"
           ariaLabel="Navigate to top of page"
-          className="home"
+          className="name-nav"
           onClick={() => alert("Title clicked")}
         />
         <NavButtons />
