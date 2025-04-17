@@ -6,6 +6,7 @@ export const NavButtons = () => {
     console.log(`${text} clicked`);
   };
 
+  /* Could extract this logic into a data map in future */
   return (
     <div className="nav-buttons">
       <Button

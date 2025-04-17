@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:wght@300;400;500;700&display=swap");
 :root {
   /* Colors */
   --off-white: #faf9f6;
@@ -42,11 +41,18 @@ main {
   background: var(--main-background-color);
   min-height: 100vh;
   transition: var(--default-transition);
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-top: 1rem;
 }
 
+/* Add footer to exceptions */
+main > *:not(header) {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
 body,
+p,
 h1,
 h2,
 h3,
@@ -62,4 +68,18 @@ p,
 button {
   color: var(--primary-color);
   transition: var(--default-transition);
+}
+
+p {
+  font: 400 1rem/1.5 "Ubuntu", sans-serif;
+}
+
+svg {
+  fill: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-inline: 2rem;
+  }
 }
