@@ -45,6 +45,7 @@ main {
   transition: var(--default-transition);
   padding-inline: 1rem;
   padding-top: 1rem;
+  padding-bottom: 50px; /* temp when building out site */
 }
 
 /* Add footer to exceptions */
@@ -67,6 +68,7 @@ h2,
 h3,
 h4,
 p,
+span,
 button {
   color: var(--primary-color);
   transition: var(--default-transition);

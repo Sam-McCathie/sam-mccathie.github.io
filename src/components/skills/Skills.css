@@ -1,36 +1,16 @@
-.skill-icon {
-  position: relative;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  transition: var(--default-transition);
-  overflow: hidden;
-}
+.skills {
+  border-radius: 3.125rem;
+  padding: 1rem;
+  background-color: var(--element-background-color);
+  box-shadow: 0 -1px 1px var(--drop-shadow-color),
+    0 4px 4px var(--drop-shadow-color);
+  text-align: center;
 
-.skill-icon:hover span {
-  bottom: 50%;
-  transform: translateY(50%);
-  transition: var(--default-transition);
-}
+  & h2 {
+    font: 500 3rem/1.5 "Ubuntu", sans-serif;
+  }
 
-.skill-icon:hover svg {
-  top: -60px;
-  transition: var(--default-transition);
-}
-
-.skill-icon svg {
-  width: 3.5rem;
-  top: 4px;
-  position: absolute;
-  transition: var(--default-transition);
-}
-
-.skill-icon span {
-  position: absolute;
-  font: 500 0.75rem/1.5 "Ubuntu", sans-serif;
-  bottom: -20px;
-  transition: var(--default-transition);
+  & h3 {
+    font: 500 2rem/1.5 "Ubuntu", sans-serif;
+  }
 }
