@@ -24,36 +24,41 @@
   transform: rotate(180deg);
 
   & svg {
-    margin-right: -0.25rem; /* fix alignment */
+    margin-right: -0.25rem; /* fixes alignment */
   }
 }
 
 .carousel .next svg {
-  margin-right: -0.25rem; /* fix alignment */
+  margin-right: -0.25rem; /* fixes alignment */
 }
 
 .carousel .content {
   --item-width: 4rem;
   --gap: 1rem;
-  --items: 2;
+  --items: 2; /* needs to sync with Carousel javascript */
 
   display: flex;
-  overflow: hidden; /* Hide items outside the frame */
+  overflow: hidden;
   width: calc(
-    (var(--item-width) * var(--items)) +
-      (calc(var(--gap) * calc(var(--items) - 1)))
+    var(--item-width) * var(--items) + var(--gap) * (var(--items) - 1)
   );
 }
 
 .carousel .content .items {
-  display: flex;
   gap: var(--gap);
   transition: transform 0.3s ease; /* Smooth animation */
+  display: flex;
+  flex-shrink: 0;
 }
 
 .carousel .content .skill-icon {
   box-sizing: border-box;
   width: var(--item-width);
   height: 4rem;
-  flex-shrink: 0;
+}
+
+@media (min-width: 540px) {
+  .carousel .content {
+    --items: 4;
+  }
 }

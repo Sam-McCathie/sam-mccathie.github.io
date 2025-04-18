@@ -1,15 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@components";
 import { tools } from "@data";
 import { NavArrowSVG } from "@svgs";
 import { SkillIcon } from "./SkillIcon";
 import "./Carousel.css";
 
-const itemWidth = 80; // Width of each item including gap
-const visibleItems = 4; // Number of items visible in the carousel at once
+const itemWidth = 80; // .skill-icon width + .content gap
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the starting index of visible items in dynamicArray
+
+  const [visibleItems, setVisibleItems] = useState(
+    window.innerWidth >= 540 ? 4 : 2
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleItems(window.innerWidth >= 540 ? 4 : 2);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const next = () => {
     setCurrentIndex((prevIndex) => {
@@ -41,14 +55,7 @@ export const Carousel = () => {
         ariaLabel="Navigate previous tool"
         className="previous"
       />
-      <div
-        className="content"
-        style={
-          {
-            "--items": visibleItems, // Dynamically set the --items variable
-          } as React.CSSProperties
-        }
-      >
+      <div className="content">
         <div
           className="items"
           style={{
