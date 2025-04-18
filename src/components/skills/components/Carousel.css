@@ -1,25 +1,25 @@
 .carousel {
   display: flex;
-  transition: transform 0.3s ease; /* Smooth animation */
+  align-items: center;
 }
 
 .carousel .content {
   --item-width: 50px;
   --gap: 16px;
-  --items: 2;
+  --items: 3;
 
   display: flex;
-  gap: var(--gap);
-  overflow: hidden;
-
-  max-width: calc(
+  overflow: hidden; /* Hide items outside the frame */
+  width: calc(
     (var(--item-width) * var(--items)) +
       (calc(var(--gap) * calc(var(--items) - 1)))
   );
 }
 
-.carousel .content.x3 {
-  --items: 3;
+.carousel .content .items {
+  display: flex;
+  gap: var(--gap);
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
 .carousel .content .item {
@@ -28,5 +28,4 @@
   width: var(--item-width);
   height: 50px;
   flex-shrink: 0;
-  transition: transform 0.3s ease;
 }
