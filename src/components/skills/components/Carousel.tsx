@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { Button } from "@components";
+import { tools } from "@data";
+import { NavArrowSVG } from "@svgs";
+import { SkillIcon } from "./SkillIcon";
 import "./Carousel.css";
 
-const contentArray = ["a", "b", "c", "d", "e"];
-const itemWidth = 66; // Width of each item including gap
-const visibleItems = 2; // Number of items visible in the carousel at once
+const itemWidth = 80; // Width of each item including gap
+const visibleItems = 4; // Number of items visible in the carousel at once
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the starting index of visible items in dynamicArray
@@ -12,7 +15,7 @@ export const Carousel = () => {
     setCurrentIndex((prevIndex) => {
       const nextIndex = prevIndex + 1;
       // Check if there are enough items to fill the visible area
-      if (nextIndex + visibleItems > contentArray.length) {
+      if (nextIndex + visibleItems > tools.length) {
         return 0; // Reset to the start
       }
       return nextIndex;
@@ -24,7 +27,7 @@ export const Carousel = () => {
       const prevIndexAdjusted = prevIndex - 1;
       // Check if going back leaves enough items to fill the visible area
       if (prevIndexAdjusted < 0) {
-        return Math.max(contentArray.length - visibleItems, 0); // Jump to the last set of items
+        return Math.max(tools.length - visibleItems, 0); // Jump to the last set of items
       }
       return prevIndexAdjusted;
     });
@@ -32,7 +35,12 @@ export const Carousel = () => {
 
   return (
     <div className="carousel">
-      <button onClick={previous}>Prev</button>
+      <Button
+        svg={<NavArrowSVG />}
+        onClick={previous}
+        ariaLabel="Navigate previous tool"
+        className="previous"
+      />
       <div
         className="content"
         style={
@@ -47,14 +55,21 @@ export const Carousel = () => {
             transform: `translateX(-${currentIndex * itemWidth}px)`,
           }}
         >
-          {contentArray.map((value, index) => (
-            <div key={index} className="item">
-              {value}
-            </div>
+          {tools.map((data, index) => (
+            <SkillIcon
+              key={index}
+              skillName={data.skillName}
+              skillSVG={data.skillSVG}
+            />
           ))}
         </div>
       </div>
-      <button onClick={next}>Next</button>
+      <Button
+        svg={<NavArrowSVG />}
+        onClick={next}
+        ariaLabel="Navigate next tool"
+        className="next"
+      />
     </div>
   );
 };

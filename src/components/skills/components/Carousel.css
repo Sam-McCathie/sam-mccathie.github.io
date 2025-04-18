@@ -1,11 +1,40 @@
 .carousel {
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+
+.carousel button:has(svg) {
+  background-color: unset;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+
+  & svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &:hover {
+    background-color: var(--element-background-color);
+  }
+}
+
+.carousel .previous {
+  transform: rotate(180deg);
+
+  & svg {
+    margin-right: -0.25rem; /* fix alignment */
+  }
+}
+
+.carousel .next svg {
+  margin-right: -0.25rem; /* fix alignment */
 }
 
 .carousel .content {
-  --item-width: 50px;
-  --gap: 16px;
+  --item-width: 4rem;
+  --gap: 1rem;
   --items: 2;
 
   display: flex;
@@ -22,10 +51,9 @@
   transition: transform 0.3s ease; /* Smooth animation */
 }
 
-.carousel .content .item {
+.carousel .content .skill-icon {
   box-sizing: border-box;
-  border: 1px solid red;
   width: var(--item-width);
-  height: 50px;
+  height: 4rem;
   flex-shrink: 0;
 }
