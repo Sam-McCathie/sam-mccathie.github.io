@@ -45,6 +45,7 @@ main {
   transition: var(--default-transition);
   padding-inline: 1rem;
   padding-top: 1rem;
+  padding-bottom: 50px; /* temp when building out site */
 }
 
 /* Add footer to exceptions */
@@ -67,17 +68,26 @@ h2,
 h3,
 h4,
 p,
+span,
 button {
   color: var(--primary-color);
   transition: var(--default-transition);
 }
 
-p {
-  font: 400 1rem/1.5 "Ubuntu", sans-serif;
-}
-
 svg {
   fill: var(--primary-color);
+}
+
+h2 {
+  font: 600 2rem/1.5 "Space Grotesk", sans-serif;
+}
+
+h3 {
+  font: 600 1.5rem/1.5 "Space Grotesk", sans-serif;
+}
+
+p {
+  font: 400 1rem/1.5 "Ubuntu", sans-serif;
 }
 
 @media (min-width: 768px) {
