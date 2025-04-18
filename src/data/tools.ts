@@ -13,6 +13,9 @@ import {
 import { ISkillData } from "@types";
 import React from "react";
 
+/* fix svg size ratios - much larger than regular tech skill icons 
+  - Need to adjust max width/height of svg inside svg frame
+*/
 export const tools: ISkillData[] = [
   { skillName: "Git", skillSVG: React.createElement(GitSVG) },
   { skillName: "Figma", skillSVG: React.createElement(FigmaSVG) },

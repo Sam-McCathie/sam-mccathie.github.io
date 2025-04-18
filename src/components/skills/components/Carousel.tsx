@@ -5,7 +5,7 @@ import { NavArrowSVG } from "@svgs";
 import { SkillIcon } from "./SkillIcon";
 import "./Carousel.css";
 
-const itemWidth = 80; // .skill-icon width + .content gap
+const itemWidth = 72; // .skill-icon width + .content gap
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the starting index of visible items in dynamicArray

@@ -7,6 +7,7 @@
   height: 4rem;
   transition: var(--default-transition);
   overflow: hidden;
+  /* border: 1px solid red; */
 }
 
 .skill-icon:hover span {
@@ -22,8 +23,8 @@
 }
 
 .skill-icon svg {
-  width: 3.5rem;
-  top: 4px;
+  width: 3rem;
+  top: 8px;
   position: absolute;
   transition: var(--default-transition);
 }

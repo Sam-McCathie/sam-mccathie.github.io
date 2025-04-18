@@ -1,7 +1,8 @@
 .carousel {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .carousel button:has(svg) {
@@ -33,14 +34,14 @@
 }
 
 .carousel .content {
-  --item-width: 4rem;
-  --gap: 1rem;
+  --item-size: 4rem; /* needs to sync with Carousel javascript */
+  --gap: 0.5rem; /* needs to sync with Carousel javascript */
   --items: 2; /* needs to sync with Carousel javascript */
 
   display: flex;
   overflow: hidden;
   width: calc(
-    var(--item-width) * var(--items) + var(--gap) * (var(--items) - 1)
+    var(--item-size) * var(--items) + var(--gap) * (var(--items) - 1)
   );
 }
 
@@ -53,8 +54,8 @@
 
 .carousel .content .skill-icon {
   box-sizing: border-box;
-  width: var(--item-width);
-  height: 4rem;
+  width: var(--item-size);
+  height: var(--item-size);
 }
 
 @media (min-width: 540px) {

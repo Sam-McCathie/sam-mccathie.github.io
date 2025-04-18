@@ -1,6 +1,7 @@
 import React from "react";
 import { SkillIcons } from "./components/SkillIcons";
 import { Carousel } from "./components/Carousel";
+import "./Skills.css";
 
 export const Skills = () => {
   return (

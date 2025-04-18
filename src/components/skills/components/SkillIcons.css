@@ -5,3 +5,9 @@
   justify-content: center;
   align-content: center;
 }
+
+@media (min-width: 375px) {
+  .skill-icons {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
