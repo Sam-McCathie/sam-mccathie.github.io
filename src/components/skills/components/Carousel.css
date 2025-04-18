@@ -1,5 +1,6 @@
 .carousel {
   display: flex;
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
 .carousel .content {
@@ -9,7 +10,7 @@
 
   display: flex;
   gap: var(--gap);
-  /* overflow: hidden; */
+  overflow: hidden;
 
   max-width: calc(
     (var(--item-width) * var(--items)) +
@@ -27,4 +28,5 @@
   width: var(--item-width);
   height: 50px;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
