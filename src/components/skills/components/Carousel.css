@@ -1,0 +1,30 @@
+.carousel {
+  display: flex;
+}
+
+.carousel .content {
+  --item-width: 50px;
+  --gap: 16px;
+  --items: 2;
+
+  display: flex;
+  gap: var(--gap);
+  /* overflow: hidden; */
+
+  max-width: calc(
+    (var(--item-width) * var(--items)) +
+      (calc(var(--gap) * calc(var(--items) - 1)))
+  );
+}
+
+.carousel .content.x3 {
+  --items: 3;
+}
+
+.carousel .content .item {
+  box-sizing: border-box;
+  border: 1px solid red;
+  width: var(--item-width);
+  height: 50px;
+  flex-shrink: 0;
+}

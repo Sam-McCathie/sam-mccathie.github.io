@@ -74,12 +74,20 @@ button {
   transition: var(--default-transition);
 }
 
-p {
-  font: 400 1rem/1.5 "Ubuntu", sans-serif;
-}
-
 svg {
   fill: var(--primary-color);
+}
+
+h2 {
+  font: 600 3rem/1.5 "Space Grotesk", sans-serif;
+}
+
+h3 {
+  font: 600 2rem/1.5 "Space Grotesk", sans-serif;
+}
+
+p {
+  font: 400 1rem/1.5 "Ubuntu", sans-serif;
 }
 
 @media (min-width: 768px) {
