@@ -10,19 +10,21 @@ const itemWidth = 72; // .skill-icon width + .content gap
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the starting index of visible items in dynamicArray
 
-  const [visibleItems, setVisibleItems] = useState(
-    window.innerWidth >= 540 ? 4 : 2
-  );
+  const [visibleItems, setVisibleItems] = useState(2);
 
   useEffect(() => {
-    const handleResize = () => {
-      setVisibleItems(window.innerWidth >= 540 ? 4 : 2);
-    };
+    if (typeof window !== "undefined") {
+      // Ensure this code only runs in the browser
+      const handleResize = () => {
+        setVisibleItems(window.innerWidth >= 540 ? 4 : 2);
+      };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      handleResize(); // Set initial value based on current window size
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const next = () => {
