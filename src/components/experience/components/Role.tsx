@@ -5,6 +5,7 @@ import React, { FC } from "react";
 export const Role: FC<RoleProps> = ({
   companyName,
   companyLogoPath,
+  companyWebsite,
   employmentPeriod,
   roleDescription,
 }) => {
@@ -15,7 +16,7 @@ export const Role: FC<RoleProps> = ({
         <div className="details">
           <div className="title">
             <h4>{companyName}</h4>
-            <a>
+            <a href={companyWebsite} target="_blank" rel="noopener noreferrer">
               <WebsiteSVG />
             </a>
           </div>
