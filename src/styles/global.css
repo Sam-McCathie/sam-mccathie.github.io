@@ -104,7 +104,6 @@ li {
   text-align: start;
 }
 
-/* Todo: utilise this class across similar components */
 .container {
   display: flex;
   flex-direction: column;
