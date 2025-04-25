@@ -9,17 +9,17 @@ export const Role: FC<RoleProps> = ({
   roleDescription,
 }) => {
   return (
-    <div className="role">
+    <div className="role container">
       <div className="overview">
         <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
           <div className="title">
-            <h3>{companyName}</h3>
+            <h4>{companyName}</h4>
             <a>
               <WebsiteSVG />
             </a>
           </div>
-          <p>{employmentPeriod}</p>
+          <p className="duration">{employmentPeriod}</p>
         </div>
       </div>
       <ul>

@@ -1,0 +1,49 @@
+.experience {
+  --logo-size: 2.5rem;
+}
+
+.experience h2 {
+  text-align: center;
+}
+
+.experience .overview {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience .details {
+  display: flex;
+  height: var(--logo-size);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience .title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  & * {
+    line-height: 1;
+  }
+}
+
+.experience .title a {
+  width: unset;
+  height: unset;
+  & svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.experience .overview img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.experience .details .duration {
+  font-size: 0.75rem;
+  line-height: 1;
+}

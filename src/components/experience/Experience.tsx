@@ -1,6 +1,7 @@
 import React from "react";
 import { Role } from "./components";
 import { roles } from "@data";
+import "./Experience.css";
 
 export const Experience = () => {
   return (
