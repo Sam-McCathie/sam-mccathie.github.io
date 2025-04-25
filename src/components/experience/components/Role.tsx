@@ -1,16 +1,32 @@
-import { JavaScriptSVG } from "@svgs";
-import React from "react";
+import { WebsiteSVG } from "@svgs";
+import { Role as RoleProps } from "data/roles";
+import React, { FC } from "react";
 
-export const Role = () => {
+export const Role: FC<RoleProps> = ({
+  companyName,
+  companyLogoPath,
+  employmentPeriod,
+  roleDescription,
+}) => {
   return (
     <div className="role">
       <div className="overview">
-        <JavaScriptSVG />
+        <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
-          <h3>Stuff</h3>
-          <p>Jul 2023 - Dec 2024</p>
+          <div className="title">
+            <h3>{companyName}</h3>
+            <a>
+              <WebsiteSVG />
+            </a>
+          </div>
+          <p>{employmentPeriod}</p>
         </div>
       </div>
+      <ul>
+        {roleDescription.map((description) => (
+          <li>{description}</li>
+        ))}
+      </ul>
     </div>
   );
 };
