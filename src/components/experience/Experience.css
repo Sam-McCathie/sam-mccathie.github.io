@@ -1,5 +1,12 @@
 .experience {
   --logo-size: 2.5rem;
+  width: 100%;
+}
+
+.experience .role.container {
+  &.closed .description {
+    display: none;
+  }
 }
 
 .experience h2 {
