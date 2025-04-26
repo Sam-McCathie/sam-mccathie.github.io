@@ -1,21 +1,21 @@
 import { NavArrowSVG, WebsiteSVG } from "@svgs";
-import { Role as IRole } from "data/roles";
-import React, { FC } from "react";
-
-interface RoleProps extends IRole {
-  isOpen: boolean;
-  toggleRoleExpanded: () => void;
-}
+import { Role as RoleProps } from "data/roles";
+import React, { FC, useState } from "react";
 
 export const Role: FC<RoleProps> = ({
   companyName,
+  role,
   companyLogoPath,
   companyWebsite,
   employmentPeriod,
   roleDescription,
-  isOpen,
-  toggleRoleExpanded,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   const containerState = isOpen ? "open" : "closed";
 
   return (
@@ -29,9 +29,10 @@ export const Role: FC<RoleProps> = ({
               <WebsiteSVG />
             </a>
           </div>
+          <p className="role">{role}</p>
           <p className="duration">{employmentPeriod}</p>
         </div>
-        <button className="toggle-arrow" onClick={toggleRoleExpanded}>
+        <button className="toggle-arrow" onClick={toggleOpen}>
           <NavArrowSVG />
         </button>
       </div>
@@ -40,9 +41,9 @@ export const Role: FC<RoleProps> = ({
           <li>{description}</li>
         ))}
       </ul>
-      <button className="close-arrow" onClick={toggleRoleExpanded}>
+      {/* <button className="close-arrow" onClick={toggleOpen}>
         <NavArrowSVG />
-      </button>
+      </button> */}
     </div>
   );
 };

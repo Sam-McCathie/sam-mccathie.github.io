@@ -4,23 +4,11 @@ import { roles } from "@data";
 import "./Experience.css";
 
 export const Experience = () => {
-  const [expandedRoleIndex, setExpandedRoleIndex] = useState<number | null>(
-    null
-  );
-
-  const toggleRoleExpanded = (index: number) => () => {
-    setExpandedRoleIndex((prev) => (prev === index ? null : index));
-  };
-
   return (
     <div className="experience">
       <h2>Experience</h2>
       {roles.map((role, index) => (
-        <Role
-          {...role}
-          isOpen={expandedRoleIndex === index}
-          toggleRoleExpanded={toggleRoleExpanded(index)}
-        />
+        <Role {...role} />
       ))}
     </div>
   );

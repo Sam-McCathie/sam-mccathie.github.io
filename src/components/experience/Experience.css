@@ -1,6 +1,9 @@
 .experience {
   --logo-size: 2.5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -66,12 +69,13 @@
 .experience .overview {
   display: flex;
   align-items: center;
+  text-align: start;
   gap: 0.5rem;
 }
 
 .experience .details {
   display: flex;
-  height: var(--logo-size);
+  height: fit-content;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -80,10 +84,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  & * {
-    line-height: 1;
-  }
 }
 
 .experience .title a {
@@ -100,9 +100,13 @@
   height: var(--logo-size);
 }
 
-.experience .details .duration {
+.experience .details p {
   font-size: 0.75rem;
-  line-height: 1;
+}
+
+.experience .details .role {
+  font-family: "Space Grotesk", "sans-serif";
+  font-weight: 600;
 }
 
 .experience .toggle-arrow {
@@ -124,5 +128,16 @@
   & svg {
     transform: rotate(-90deg);
     margin-top: -0.125rem;
+  }
+}
+
+@media (max-width: 319px) {
+  .experience .title {
+    & a {
+      display: none;
+    }
+    & h4 {
+      font-size: 1rem;
+    }
   }
 }
