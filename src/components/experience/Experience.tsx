@@ -3,8 +3,6 @@ import { Role } from "./components";
 import { roles } from "@data";
 import "./Experience.css";
 
-const roleIndexes = roles.map((_, index) => index);
-
 export const Experience = () => {
   const [expandedRoleIndex, setExpandedRoleIndex] = useState<number | null>(
     null

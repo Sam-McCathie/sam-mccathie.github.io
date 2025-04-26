@@ -1,11 +1,33 @@
 .experience {
   --logo-size: 2.5rem;
   width: 100%;
+  margin-bottom: 500px; /* temp testing animation */
 }
 
 .experience .role.container {
-  &.closed .description {
-    display: none;
+  overflow: hidden;
+
+  &.open {
+    gap: 0.5rem;
+    transition: gap 0.3s ease-out;
+
+    & .description {
+      opacity: 1;
+      max-height: 1000px;
+      transition: all 1s ease-out;
+    }
+  }
+
+  &.closed {
+    gap: 0;
+    transition: gap 0.5 ease-out;
+
+    & .description {
+      opacity: 0;
+      gap: 0;
+      max-height: 0;
+      transition: all 0.3s ease-out;
+    }
   }
 }
 
