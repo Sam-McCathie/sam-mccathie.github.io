@@ -10,6 +10,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
+  & .description {
+    display: none;
+  }
+
+  & .role .description {
+    display: block;
+  }
 }
 
 /* Animation management */
@@ -164,6 +172,16 @@
 @media (min-width: 768px) {
   .experience .container {
     padding: 1rem;
+  }
+
+  .experience .roles {
+    & .description {
+      display: block;
+    }
+
+    & .role .description {
+      display: none;
+    }
   }
 
   .experience .role :is(.description, .close-arrow) {
