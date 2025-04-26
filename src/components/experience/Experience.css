@@ -6,18 +6,17 @@
   width: 100%;
 }
 
-.experience .roles {
+.experience .roles > .description {
+  display: none;
+}
+
+.experience .roles > .role .description {
+  display: block;
+}
+.experience .role {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-
-  & .description {
-    display: none;
-  }
-
-  & .role .description {
-    display: block;
-  }
 }
 
 /* Animation management */
@@ -174,19 +173,25 @@
     padding: 1rem;
   }
 
-  .experience .roles {
-    & .description {
-      display: block;
-    }
+  .experience .roles > .description {
+    display: block;
+  }
 
-    & .role .description {
-      display: none;
-    }
+  .experience .roles > .role .description {
+    display: none;
   }
 
   .experience .role :is(.description, .close-arrow) {
     display: none;
   }
+
+  .experience .roles {
+    flex-direction: row;
+  }
+
+  /* .experience .container.open .toggle-arrow {
+    pointer-events: none;
+  } */
 }
 
 @media (max-width: 319px) {

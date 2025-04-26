@@ -4,6 +4,7 @@ import React, { FC, useState } from "react";
 import { Description } from "./Description";
 
 interface RoleProps extends IRole {
+  isActice: boolean;
   changeDescription: () => void;
 }
 
@@ -14,6 +15,7 @@ export const Role: FC<RoleProps> = ({
   companyWebsite,
   employmentPeriod,
   roleDescription,
+  isActice,
   changeDescription,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +28,7 @@ export const Role: FC<RoleProps> = ({
   const containerState = isOpen ? "open" : "closed";
 
   return (
-    <div className={`role container ${containerState}`}>
+    <div className={`container ${containerState}`}>
       <div className="overview">
         <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
@@ -39,7 +41,12 @@ export const Role: FC<RoleProps> = ({
           <p className="role">{role}</p>
           <p className="duration">{employmentPeriod}</p>
         </div>
-        <button className="toggle-arrow" onClick={toggleRole}>
+        {/* TODO fix/ add disabled state*/}
+        <button
+          className="toggle-arrow"
+          disabled={isActice}
+          onClick={toggleRole}
+        >
           <NavArrowSVG />
         </button>
       </div>
