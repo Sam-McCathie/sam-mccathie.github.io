@@ -1,9 +1,10 @@
 .experience {
   --logo-size: 2.5rem;
+  position: relative;
   width: 100%;
-  margin-bottom: 500px; /* temp testing animation */
 }
 
+/* Animation management */
 .experience .role.container {
   overflow: hidden;
 
@@ -11,21 +12,48 @@
     gap: 0.5rem;
     transition: gap 0.3s ease;
 
+    & .toggle-arrow {
+      transform: rotate(-90deg);
+      box-shadow: -4px 0 8px var(--drop-shadow-color);
+
+      &:hover {
+        box-shadow: 0 6px 12px var(--drop-shadow-color),
+          0 -4px 8px var(--drop-shadow-color);
+      }
+    }
+
     & .description {
       opacity: 1;
-      max-height: 1000px;
+      max-height: 2000px;
       transition: all 1s ease;
+    }
+
+    & .close-arrow {
+      opacity: 1;
     }
   }
 
   &.closed {
     gap: 0;
 
+    & .toggle-arrow {
+      transform: rotate(90deg);
+      box-shadow: 4px 0 8px var(--drop-shadow-color);
+      &:hover {
+        box-shadow: 0 -6px 12px var(--drop-shadow-color),
+          0 4px 8px var(--drop-shadow-color);
+      }
+    }
+
     & .description {
       opacity: 0;
       gap: 0;
       max-height: 0;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
+    }
+
+    & .close-arrow {
+      opacity: 0;
     }
   }
 }
@@ -75,4 +103,26 @@
 .experience .details .duration {
   font-size: 0.75rem;
   line-height: 1;
+}
+
+.experience .toggle-arrow {
+  margin-left: auto;
+}
+
+.experience .close-arrow {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px var(--drop-shadow-color);
+
+  &:hover {
+    box-shadow: 0 6px 12px var(--drop-shadow-color),
+      0 -4px 8px var(--drop-shadow-color);
+  }
+
+  & svg {
+    transform: rotate(-90deg);
+    margin-top: -0.125rem;
+  }
 }

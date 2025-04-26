@@ -31,7 +31,7 @@ export const Role: FC<RoleProps> = ({
           </div>
           <p className="duration">{employmentPeriod}</p>
         </div>
-        <button onClick={toggleRoleExpanded}>
+        <button className="toggle-arrow" onClick={toggleRoleExpanded}>
           <NavArrowSVG />
         </button>
       </div>
@@ -40,9 +40,9 @@ export const Role: FC<RoleProps> = ({
           <li>{description}</li>
         ))}
       </ul>
-      {/* <button onClick={toggleRoleExpanded}>
+      <button className="close-arrow" onClick={toggleRoleExpanded}>
         <NavArrowSVG />
-      </button> */}
+      </button>
     </div>
   );
 };

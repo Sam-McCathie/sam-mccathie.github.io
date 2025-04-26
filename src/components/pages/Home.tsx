@@ -10,8 +10,8 @@ export const Home = () => {
     <main className={theme}>
       <Header />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
     </main>
   );
 };
