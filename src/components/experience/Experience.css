@@ -6,13 +6,16 @@
   width: 100%;
 }
 
-.experience .role {
-  position: relative;
+.experience .roles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 /* Animation management */
-.experience .role.container {
+.experience .container {
   overflow: hidden;
+  position: relative;
 
   &.open {
     gap: 0.5rem;
@@ -104,10 +107,10 @@
 }
 
 .experience .details p {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
-.experience .details .role {
+.experience .details .container {
   font-family: "Space Grotesk", "sans-serif";
   font-weight: 600;
 }
@@ -131,6 +134,40 @@
   & svg {
     transform: rotate(-90deg);
     margin-top: -0.125rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .experience {
+    --logo-size: 3rem;
+  }
+
+  .experience .overview {
+    gap: 1rem;
+  }
+
+  .experience h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .experience .overview {
+    gap: 2rem;
+
+    & p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .experience .container {
+    padding: 1rem;
+  }
+
+  .experience .role :is(.description, .close-arrow) {
+    display: none;
   }
 }
 
