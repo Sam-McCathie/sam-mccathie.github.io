@@ -1,10 +1,13 @@
 .experience {
   --logo-size: 2.5rem;
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
   width: 100%;
+}
+
+.experience .role {
+  position: relative;
 }
 
 /* Animation management */
@@ -14,6 +17,7 @@
   &.open {
     gap: 0.5rem;
     transition: gap 0.3s ease;
+    overflow: visible;
 
     & .toggle-arrow {
       transform: rotate(-90deg);
@@ -63,7 +67,6 @@
 
 .experience h2 {
   text-align: center;
-  margin-bottom: 0.75rem;
 }
 
 .experience .overview {

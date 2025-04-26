@@ -41,9 +41,9 @@ export const Role: FC<RoleProps> = ({
           <li>{description}</li>
         ))}
       </ul>
-      {/* <button className="close-arrow" onClick={toggleOpen}>
+      <button className="close-arrow" onClick={toggleOpen}>
         <NavArrowSVG />
-      </button> */}
+      </button>
     </div>
   );
 };

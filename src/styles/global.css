@@ -98,6 +98,9 @@ li {
 ul {
   margin: 0;
   padding-inline-start: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 li {
