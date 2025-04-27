@@ -2,7 +2,6 @@ export interface Role {
   companyName: string;
   role: string;
   companyLogoPath: string;
-  companyWebsite: string;
   employmentPeriod: string;
   roleDescription: string[];
 }
@@ -12,7 +11,6 @@ export const roles: Role[] = [
     companyName: "Stuff",
     role: "Software Engineer",
     companyLogoPath: "/stuff-logo.png",
-    companyWebsite: "https://www.stuff.co.nz/",
     employmentPeriod: "Jul 2023 - Dec 2024",
     roleDescription: [
       "Developed scalable, reusable components for the Stuff front-end Monorepo, supporting the main Stuff app and affiliated Masthead products (e.g., The Press, The Post, Waikato Times).",
@@ -26,7 +24,6 @@ export const roles: Role[] = [
     companyName: "Fergus",
     role: "Full Stack Engineer",
     companyLogoPath: "/fergus-logo.png",
-    companyWebsite: "https://fergus.com/",
     employmentPeriod: "May 2022 - July 2023",
     roleDescription: [
       "Primarily working on the Fergus Go Mobile App that utilises React Native, Typescript, GraphQL, PHP, and Postgres. In addition, I work on the main Fergus Web app Monolith, usually when updating or creating new APIs to utilise on the mobile app.",
@@ -43,7 +40,6 @@ export const roles: Role[] = [
     companyName: "Dacreed",
     role: "Full Stack Developer",
     companyLogoPath: "/dacreed-logo.png",
-    companyWebsite: "https://www.dacreed.com/",
     employmentPeriod: "Oct 2021 - Mar 2022",
     roleDescription: [
       "Managed and updated dacreed.com, learnplus.ac.nz, teamsplus.co.nz and pressroom.dacreed.com static sites that all use the React-based Gatsby framework. Build the core of a static site for an unreleased Dacreed product.",
@@ -56,7 +52,6 @@ export const roles: Role[] = [
     companyName: "Dacreed",
     role: "Intern",
     companyLogoPath: "/dacreed-logo.png",
-    companyWebsite: "https://www.dacreed.com/",
     employmentPeriod: "Jul 2021 - Oct 2021",
     roleDescription: [
       "Designed and developed innovative prototypes to enhance the user experience of learners completing online courses inside of a progressive web application. The application was created using React, Node.js, Postgres and hosted on Heroku.",
@@ -69,7 +64,6 @@ export const roles: Role[] = [
     companyName: "Mission Ready",
     role: "Student",
     companyLogoPath: "/mission-ready-logo.png",
-    companyWebsite: "https://www.missionreadyhq.com/",
     employmentPeriod: "Feb 2021 - Oct 2021",
     roleDescription: [
       "Learned the essential full stack developer skills for both the front and backend of software development with a primary focus on developing my skills with React, JavaScript, CSS, Node.js, MySQL, and Githhub.",

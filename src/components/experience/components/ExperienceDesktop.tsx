@@ -1,8 +1,8 @@
-import { roles } from "@data";
 import React, { useState } from "react";
+import { roles } from "@data";
 import { Description } from "./Description";
-import "./ExperienceDesktop.css";
 import { RoleDesktop } from "./RoleDesktop";
+import "./ExperienceDesktop.css";
 
 export const ExperienceDesktop = () => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(0);

@@ -1,4 +1,4 @@
-import { NavArrowSVG, WebsiteSVG } from "@svgs";
+import { NavArrowSVG } from "@svgs";
 import { Role as IRole } from "data/roles";
 import React, { FC } from "react";
 
@@ -19,9 +19,7 @@ export const RoleDesktop: FC<RoleProps> = ({
       <div className="overview">
         <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
-          <div className="title">
-            <h4>{companyName}</h4>
-          </div>
+          <h4>{companyName}</h4>
           <p className="role">{role}</p>
         </div>
         <button

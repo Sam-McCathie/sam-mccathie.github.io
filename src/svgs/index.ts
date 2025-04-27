@@ -23,4 +23,3 @@ export { JiraSVG } from "./JiraSVG";
 export { SlackSVG } from "./SlackSVG";
 export { TeamsSVG } from "./TeamsSVG";
 export { TrelloSVG } from "./TrelloSVG";
-export { WebsiteSVG } from "./WebsiteSVG";

@@ -1,13 +1,12 @@
-import { NavArrowSVG, WebsiteSVG } from "@svgs";
-import { Role as RoleProps } from "data/roles";
 import React, { FC, useState } from "react";
+import { Role as RoleProps } from "data/roles";
 import { Description } from "./Description";
+import { NavArrowSVG } from "@svgs";
 
 export const RoleMobile: FC<RoleProps> = ({
   companyName,
   role,
   companyLogoPath,
-  companyWebsite,
   employmentPeriod,
   roleDescription,
 }) => {
@@ -24,12 +23,7 @@ export const RoleMobile: FC<RoleProps> = ({
       <div className="overview">
         <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
-          <div className="title">
-            <h4>{companyName}</h4>
-            <a href={companyWebsite} target="_blank" rel="noopener noreferrer">
-              <WebsiteSVG />
-            </a>
-          </div>
+          <h4>{companyName}</h4>
           <p className="role">{role}</p>
           <p className="duration">{employmentPeriod}</p>
         </div>

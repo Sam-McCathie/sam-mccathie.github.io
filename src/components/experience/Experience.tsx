@@ -1,6 +1,5 @@
 import React from "react";
-import { ExperienceMobile } from "./components/ExperienceMobile";
-import { ExperienceDesktop } from "./components/ExperienceDesktop";
+import { ExperienceDesktop, ExperienceMobile } from "./components";
 import "./Experience.css";
 
 export const Experience = () => {
