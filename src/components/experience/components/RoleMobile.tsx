@@ -1,36 +1,26 @@
 import { NavArrowSVG, WebsiteSVG } from "@svgs";
-import { Role as IRole } from "data/roles";
+import { Role as RoleProps } from "data/roles";
 import React, { FC, useState } from "react";
 import { Description } from "./Description";
 
-interface RoleProps extends IRole {
-  mode: "mobile" | "desktop";
-  isActice?: boolean;
-  changeDescription?: () => void;
-}
-
-export const Role: FC<RoleProps> = ({
+export const RoleMobile: FC<RoleProps> = ({
   companyName,
   role,
   companyLogoPath,
   companyWebsite,
   employmentPeriod,
   roleDescription,
-  isActice,
-  mode,
-  changeDescription,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleRole = () => {
     setIsOpen(!isOpen);
-    changeDescription && changeDescription();
   };
 
   const containerState = isOpen ? "open" : "closed";
 
   return (
-    <div className={`role container ${containerState} ${mode}`}>
+    <div className={`role container mobile ${containerState}`}>
       <div className="overview">
         <img src={companyLogoPath} alt={`${companyName} logo`} />
         <div className="details">
@@ -43,12 +33,7 @@ export const Role: FC<RoleProps> = ({
           <p className="role">{role}</p>
           <p className="duration">{employmentPeriod}</p>
         </div>
-        {/* TODO fix/ add disabled state*/}
-        <button
-          className="toggle-arrow"
-          // disabled={isActice}
-          onClick={toggleRole}
-        >
+        <button className="toggle-arrow" onClick={toggleRole}>
           <NavArrowSVG />
         </button>
       </div>

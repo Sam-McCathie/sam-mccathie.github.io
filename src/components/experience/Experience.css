@@ -1,82 +1,20 @@
 .experience {
   --logo-size: 2.5rem;
+
+  & h2 {
+    text-align: center;
+  }
+}
+
+.experience,
+.experience .roles {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  width: 100%;
 }
 
-.experience .roles > .description {
+.experience .experience-desktop {
   display: none;
-}
-
-.experience .roles > .role .description {
-  display: block;
-}
-.experience .role {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-/* Animation management */
-.experience .container {
-  overflow: hidden;
-  position: relative;
-
-  &.open {
-    gap: 0.5rem;
-    transition: gap 0.3s ease;
-    overflow: visible;
-
-    & .toggle-arrow {
-      transform: rotate(-90deg);
-      box-shadow: -4px 0 8px var(--drop-shadow-color);
-
-      &:hover {
-        box-shadow: 0 6px 12px var(--drop-shadow-color),
-          0 -4px 8px var(--drop-shadow-color);
-      }
-    }
-
-    & .description {
-      opacity: 1;
-      max-height: 2000px;
-      transition: all 1s ease;
-    }
-
-    & .close-arrow {
-      opacity: 1;
-    }
-  }
-
-  &.closed {
-    gap: 0;
-
-    & .toggle-arrow {
-      transform: rotate(90deg);
-      box-shadow: 4px 0 8px var(--drop-shadow-color);
-      &:hover {
-        box-shadow: 0 -6px 12px var(--drop-shadow-color),
-          0 4px 8px var(--drop-shadow-color);
-      }
-    }
-
-    & .description {
-      opacity: 0;
-      gap: 0;
-      max-height: 0;
-      transition: all 0.4s ease;
-    }
-
-    & .close-arrow {
-      opacity: 0;
-    }
-  }
-}
-
-.experience h2 {
-  text-align: center;
 }
 
 .experience .overview {
@@ -117,102 +55,18 @@
   font-size: 0.875rem;
 }
 
-.experience .details .container {
-  font-family: "Space Grotesk", "sans-serif";
-  font-weight: 600;
-}
-
 .experience .toggle-arrow {
   margin-left: auto;
 }
 
-.experience .close-arrow {
-  position: absolute;
-  bottom: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 8px var(--drop-shadow-color);
-
-  &:hover {
-    box-shadow: 0 6px 12px var(--drop-shadow-color),
-      0 -4px 8px var(--drop-shadow-color);
-  }
-
-  & svg {
-    transform: rotate(-90deg);
-    margin-top: -0.125rem;
-  }
-}
-
-/* extra small screens */
-@media (max-width: 319px) {
-  .experience .title {
-    & a {
+@media (min-width: 768px) {
+  .experience {
+    & .mobile {
       display: none;
     }
-    & h4 {
-      font-size: 1rem;
+
+    & .experience-desktop {
+      display: flex;
     }
-  }
-}
-
-@media (min-width: 375px) {
-  .experience {
-    --logo-size: 3rem;
-  }
-
-  .experience .overview {
-    gap: 1rem;
-  }
-
-  .experience h4 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 540px) {
-  .experience .overview {
-    gap: 2rem;
-
-    & p {
-      font-size: 1rem;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .experience .roles {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .experience .overview {
-    width: 290px;
-    gap: 0.5rem;
-  }
-
-  .experience .container {
-    overflow: visible;
-    padding: 1rem;
-  }
-
-  .experience .roles > .description {
-    display: block;
-
-    & li {
-      margin-left: 1rem;
-    }
-  }
-
-  .experience .roles > .role .description {
-    display: none;
-  }
-
-  .experience .role :is(.description, .close-arrow) {
-    display: none;
-  }
-
-  .experience .roles {
-    flex-direction: row;
   }
 }

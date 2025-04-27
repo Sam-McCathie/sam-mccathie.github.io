@@ -10,10 +10,12 @@ export const Description: FC<DescriptionProps> = ({
   className = "",
 }) => {
   return (
-    <ul className={`description ${className}`}>
-      {roleDescription.map((description) => (
-        <li>{description}</li>
-      ))}
-    </ul>
+    <div className={`description ${className}`}>
+      <ul>
+        {roleDescription.map((description) => (
+          <li>{description}</li>
+        ))}
+      </ul>
+    </div>
   );
 };

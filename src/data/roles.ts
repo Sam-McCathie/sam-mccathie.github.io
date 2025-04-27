@@ -54,7 +54,7 @@ export const roles: Role[] = [
   },
   {
     companyName: "Dacreed",
-    role: "Intern - Full Stack Developer",
+    role: "Intern",
     companyLogoPath: "/dacreed-logo.png",
     companyWebsite: "https://www.dacreed.com/",
     employmentPeriod: "Jul 2021 - Oct 2021",
