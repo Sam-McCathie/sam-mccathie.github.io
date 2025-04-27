@@ -18,7 +18,9 @@ a:has(svg) {
   }
 
   &:disabled {
-    background-color: var(--disabled-colour);
+    background-color: var(--disabled-color);
+    box-shadow: none !important;
+    pointer-events: none;
   }
 
   &:has(svg) {

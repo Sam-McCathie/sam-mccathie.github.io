@@ -188,10 +188,6 @@
   .experience .roles {
     flex-direction: row;
   }
-
-  /* .experience .container.open .toggle-arrow {
-    pointer-events: none;
-  } */
 }
 
 @media (max-width: 319px) {
