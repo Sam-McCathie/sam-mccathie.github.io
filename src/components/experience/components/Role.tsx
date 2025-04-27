@@ -50,7 +50,7 @@ export const Role: FC<RoleProps> = ({
           <NavArrowSVG />
         </button>
       </div>
-      <Description roleDescription={roleDescription} />
+      {/* <Description roleDescription={roleDescription} className="container" /> */}
       <button className="close-arrow" onClick={toggleRole}>
         <NavArrowSVG />
       </button>

@@ -144,6 +144,18 @@
   }
 }
 
+/* extra small screens */
+@media (max-width: 319px) {
+  .experience .title {
+    & a {
+      display: none;
+    }
+    & h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media (min-width: 375px) {
   .experience {
     --logo-size: 3rem;
@@ -169,12 +181,27 @@
 }
 
 @media (min-width: 768px) {
+  .experience .roles {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .experience .overview {
+    width: 290px;
+    gap: 0.5rem;
+  }
+
   .experience .container {
+    overflow: visible;
     padding: 1rem;
   }
 
   .experience .roles > .description {
     display: block;
+
+    & li {
+      margin-left: 1rem;
+    }
   }
 
   .experience .roles > .role .description {
@@ -187,16 +214,5 @@
 
   .experience .roles {
     flex-direction: row;
-  }
-}
-
-@media (max-width: 319px) {
-  .experience .title {
-    & a {
-      display: none;
-    }
-    & h4 {
-      font-size: 1rem;
-    }
   }
 }
