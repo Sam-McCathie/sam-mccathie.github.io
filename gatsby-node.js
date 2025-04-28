@@ -9,6 +9,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@context": path.resolve(__dirname, "src/context"),
         "@types": path.resolve(__dirname, "src/types"),
         "@data": path.resolve(__dirname, "src/data"),
+        "@helpers": path.resolve(__dirname, "src/helpers"),
       },
     },
   });

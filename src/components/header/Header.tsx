@@ -2,6 +2,7 @@ import React from "react";
 import { HamburgerSVG } from "@svgs";
 import { Button } from "@components";
 import { NavButtons, ThemeToggle } from "./components";
+import { scrollToTop } from "@helpers";
 import "./Header.css";
 
 export const Header = () => {
@@ -18,7 +19,7 @@ export const Header = () => {
           text="Sam McCathie"
           ariaLabel="Navigate to top of page"
           className="name-nav"
-          onClick={() => alert("Title clicked")}
+          onClick={scrollToTop}
         />
         <NavButtons />
         <ThemeToggle />
