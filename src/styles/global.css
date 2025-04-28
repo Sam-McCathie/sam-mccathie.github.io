@@ -2,7 +2,7 @@
 :root {
   /* Colors */
   --off-white: #faf9f6;
-  --grey: #c4c4c4;
+  --grey: #e0dfdb;
   --dark-grey: #2c2c2c;
   --charcoal: #242424;
   --darkest-grey: #1c1c1c;
@@ -12,7 +12,6 @@
   );
   --gradient-primary: var(--off-white);
   --gradient-secondary: #d1e9f6;
-  --disabled-color: #c4c4c4;
 
   /* Animations */
   --default-transition: all 0.5s ease;
@@ -22,19 +21,23 @@
 main.light {
   --primary-color: var(--dark-grey);
   --element-background-color: var(--off-white);
+  --element-alternate-background-color: rgba(250, 250, 246, 0.2);
   /* TODO:
   * - the gradient colour doesn't transition, it works fine if it is a solid colour, look into fix.
   */
   --main-background-color: var(--gradient);
   --drop-shadow-color: rgba(0, 0, 0, 0.25);
+  --disabled-color: var(--grey);
 }
 
 /* dark mode */
 main.dark {
   --primary-color: var(--off-white);
   --element-background-color: var(--darkest-grey);
-  --main-background-color: var(--darkest-grey);
+  --element-alternate-background-color: rgba(28, 28, 28, 0.2);
+  --main-background-color: var(--charcoal);
   --drop-shadow-color: rgb(238, 238, 238, 0.25);
+  --disabled-color: var(--charcoal);
 }
 
 main {
@@ -70,7 +73,8 @@ h3,
 h4,
 p,
 span,
-button {
+button,
+li {
   color: var(--primary-color);
   transition: var(--default-transition);
 }
