@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@context";
-import { About, Header, Skills, Experience } from "@components";
+import { About, Header, Skills, Experience, ReturnToTop } from "@components";
 
 /* Update location in future*/
 export const Home = () => {
@@ -12,6 +12,7 @@ export const Home = () => {
       <About />
       <Skills />
       <Experience />
+      <ReturnToTop />
     </main>
   );
 };
