@@ -1,0 +1,15 @@
+.return-to-top {
+  width: 100%;
+}
+
+.return-to-top button {
+  transform: rotate(-90deg);
+  margin-left: auto;
+  height: 3.125rem;
+  width: 3.125rem;
+
+  & svg {
+    height: 3rem;
+    width: 3rem;
+  }
+}

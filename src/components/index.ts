@@ -4,3 +4,4 @@ export { About } from "./about";
 export { Home } from "./pages";
 export { Skills } from "./skills";
 export { Experience } from "./experience";
+export { ReturnToTop } from "./return-to-top";
