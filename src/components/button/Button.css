@@ -20,7 +20,7 @@ a:has(svg) {
   &:disabled {
     background-color: var(--disabled-color);
     box-shadow: none !important;
-    pointer-events: none;
+    cursor: not-allowed;
   }
 
   &:has(svg) {
