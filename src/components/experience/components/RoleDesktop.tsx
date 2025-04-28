@@ -1,35 +1,14 @@
-import { NavArrowSVG } from "@svgs";
-import { Role as IRole } from "data/roles";
+import { Role } from "data/roles";
 import React, { FC } from "react";
+import { Overview } from "./Overview";
 
-interface RoleProps extends IRole {
-  isActice: boolean;
-  changeDescription: () => void;
+interface RoleProps extends Role {
+  isActive: boolean;
+  onClick: () => void;
 }
 
-export const RoleDesktop: FC<RoleProps> = ({
-  companyName,
-  role,
-  companyLogoPath,
-  isActice,
-  changeDescription,
-}) => {
-  return (
-    <div className={`role container`}>
-      <div className="overview">
-        <img src={companyLogoPath} alt={`${companyName} logo`} />
-        <div className="details">
-          <h4>{companyName}</h4>
-          <p className="role">{role}</p>
-        </div>
-        <button
-          className="toggle-arrow"
-          disabled={isActice}
-          onClick={changeDescription}
-        >
-          <NavArrowSVG />
-        </button>
-      </div>
-    </div>
-  );
-};
+export const RoleDesktop: FC<RoleProps> = (props) => (
+  <div className={`role container`}>
+    <Overview {...props} />
+  </div>
+);

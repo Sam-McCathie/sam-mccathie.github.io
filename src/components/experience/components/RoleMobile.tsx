@@ -2,14 +2,9 @@ import React, { FC, useState } from "react";
 import { Role as RoleProps } from "data/roles";
 import { Description } from "./Description";
 import { NavArrowSVG } from "@svgs";
+import { Overview } from "./Overview";
 
-export const RoleMobile: FC<RoleProps> = ({
-  companyName,
-  role,
-  companyLogoPath,
-  employmentPeriod,
-  roleDescription,
-}) => {
+export const RoleMobile: FC<RoleProps> = ({ roleDescription, ...rest }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleRole = () => {
@@ -20,17 +15,7 @@ export const RoleMobile: FC<RoleProps> = ({
 
   return (
     <div className={`role container mobile ${containerState}`}>
-      <div className="overview">
-        <img src={companyLogoPath} alt={`${companyName} logo`} />
-        <div className="details">
-          <h4>{companyName}</h4>
-          <p className="role">{role}</p>
-          <p className="duration">{employmentPeriod}</p>
-        </div>
-        <button className="toggle-arrow" onClick={toggleRole}>
-          <NavArrowSVG />
-        </button>
-      </div>
+      <Overview {...rest} onClick={toggleRole} />
       <Description roleDescription={roleDescription} />
       <button className="close-arrow" onClick={toggleRole}>
         <NavArrowSVG />

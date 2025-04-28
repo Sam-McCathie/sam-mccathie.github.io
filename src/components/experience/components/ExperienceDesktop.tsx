@@ -17,9 +17,10 @@ export const ExperienceDesktop = () => {
       <div className="roles">
         {roles.map((role, index) => (
           <RoleDesktop
+            key={index}
             {...role}
-            isActice={activeDescriptionIndex === index}
-            changeDescription={changeDescription(index)}
+            isActive={activeDescriptionIndex === index}
+            onClick={changeDescription(index)}
           />
         ))}
       </div>

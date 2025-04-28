@@ -8,14 +8,12 @@ interface DescriptionProps {
 export const Description: FC<DescriptionProps> = ({
   roleDescription,
   className = "",
-}) => {
-  return (
-    <div className={`description ${className}`}>
-      <ul>
-        {roleDescription.map((description) => (
-          <li>{description}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+}) => (
+  <div className={`description ${className}`}>
+    <ul>
+      {roleDescription.map((description, index) => (
+        <li key={index}>{description}</li>
+      ))}
+    </ul>
+  </div>
+);

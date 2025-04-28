@@ -6,8 +6,12 @@ import "./SkillIcons.css";
 export const SkillIcons = () => {
   return (
     <div className="skill-icons">
-      {technologies.map((data) => (
-        <SkillIcon skillName={data.skillName} skillSVG={data.skillSVG} />
+      {technologies.map((data, key) => (
+        <SkillIcon
+          key={key}
+          skillName={data.skillName}
+          skillSVG={data.skillSVG}
+        />
       ))}
     </div>
   );
