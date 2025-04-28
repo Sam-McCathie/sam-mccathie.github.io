@@ -11,9 +11,9 @@ export const HamburgerSVG = () => (
   >
     <path
       d="M4.29688 19.1406H20.7031M4.29688 12.8906H20.7031M4.29688 6.64062H20.7031"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

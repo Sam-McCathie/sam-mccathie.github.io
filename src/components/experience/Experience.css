@@ -1,0 +1,61 @@
+.experience {
+  --logo-size: 2.5rem;
+
+  & h2 {
+    text-align: center;
+  }
+}
+
+.experience,
+.experience .roles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience .role {
+  cursor: pointer;
+}
+
+.experience .experience-desktop {
+  display: none;
+}
+
+.experience .overview {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 0.5rem;
+}
+
+.experience .details {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience .overview img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.experience .details p {
+  font-size: 0.875rem;
+}
+
+.experience .toggle-arrow {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .experience {
+    & .mobile {
+      display: none;
+    }
+
+    & .experience-desktop {
+      display: flex;
+    }
+  }
+}

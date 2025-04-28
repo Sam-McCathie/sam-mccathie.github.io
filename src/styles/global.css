@@ -2,7 +2,7 @@
 :root {
   /* Colors */
   --off-white: #faf9f6;
-  --grey: #c4c4c4;
+  --grey: #e0dfdb;
   --dark-grey: #2c2c2c;
   --charcoal: #242424;
   --darkest-grey: #1c1c1c;
@@ -21,19 +21,23 @@
 main.light {
   --primary-color: var(--dark-grey);
   --element-background-color: var(--off-white);
+  --element-alternate-background-color: rgba(250, 250, 246, 0.2);
   /* TODO:
   * - the gradient colour doesn't transition, it works fine if it is a solid colour, look into fix.
   */
   --main-background-color: var(--gradient);
   --drop-shadow-color: rgba(0, 0, 0, 0.25);
+  --disabled-color: var(--grey);
 }
 
 /* dark mode */
 main.dark {
   --primary-color: var(--off-white);
   --element-background-color: var(--darkest-grey);
-  --main-background-color: var(--darkest-grey);
+  --element-alternate-background-color: rgba(28, 28, 28, 0.2);
+  --main-background-color: var(--charcoal);
   --drop-shadow-color: rgb(238, 238, 238, 0.25);
+  --disabled-color: var(--charcoal);
 }
 
 main {
@@ -69,7 +73,8 @@ h3,
 h4,
 p,
 span,
-button {
+button,
+li {
   color: var(--primary-color);
   transition: var(--default-transition);
 }
@@ -79,19 +84,54 @@ svg {
 }
 
 h2 {
-  font: 600 2rem/1.5 "Space Grotesk", sans-serif;
+  font: 800 2.5rem/1.5 "Space Grotesk", sans-serif;
 }
 
 h3 {
-  font: 600 1.5rem/1.5 "Space Grotesk", sans-serif;
+  font: 800 2rem/1.5 "Space Grotesk", sans-serif;
 }
 
-p {
+h4 {
+  font: 600 1.25rem/1.5 "Ubuntu", sans-serif;
+}
+
+p,
+li {
   font: 400 1rem/1.5 "Ubuntu", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding-inline-start: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  text-align: start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--element-background-color);
+  box-shadow: 0 -1px 1px var(--drop-shadow-color),
+    0 4px 4px var(--drop-shadow-color);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   main {
     padding-inline: 2rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
   }
 }

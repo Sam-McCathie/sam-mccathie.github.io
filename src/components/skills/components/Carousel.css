@@ -24,6 +24,10 @@
 .carousel .previous {
   transform: rotate(180deg);
 
+  &:hover {
+    box-shadow: 0 -4px 8px var(--drop-shadow-color);
+  }
+
   & svg {
     margin-right: -0.25rem; /* fixes alignment */
   }

@@ -1,0 +1,128 @@
+.experience-mobile .role {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &.open {
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+    overflow: visible;
+
+    & .toggle-arrow {
+      transform: rotate(-90deg);
+      box-shadow: -4px 0 8px var(--drop-shadow-color);
+
+      &:hover {
+        box-shadow: 0 6px 12px var(--drop-shadow-color),
+          0 -4px 8px var(--drop-shadow-color);
+      }
+    }
+
+    & .description {
+      opacity: 1;
+      max-height: 2000px;
+      transition: all 1s ease;
+    }
+
+    & .close-arrow {
+      opacity: 1;
+    }
+  }
+
+  &.closed {
+    gap: 0;
+
+    & .toggle-arrow {
+      transform: rotate(90deg);
+      box-shadow: 4px 0 8px var(--drop-shadow-color);
+      &:hover {
+        box-shadow: 0 -6px 12px var(--drop-shadow-color),
+          0 4px 8px var(--drop-shadow-color);
+      }
+    }
+
+    & .description {
+      opacity: 0;
+      gap: 0;
+      max-height: 0;
+      transition: all 0.4s ease;
+    }
+
+    & .close-arrow {
+      opacity: 0;
+    }
+  }
+}
+
+.experience-mobile .role .overview {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 0.5rem;
+}
+
+.experience-mobile .role .details {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience-mobile .role .overview img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.experience-mobile .role .details p {
+  font-size: 0.875rem;
+}
+
+.experience-mobile .role .toggle-arrow {
+  margin-left: auto;
+}
+
+.experience-mobile .role .close-arrow {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px var(--drop-shadow-color);
+
+  &:hover {
+    box-shadow: 0 6px 12px var(--drop-shadow-color),
+      0 -4px 8px var(--drop-shadow-color);
+  }
+
+  & svg {
+    transform: rotate(-90deg);
+    margin-top: -0.125rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .experience {
+    --logo-size: 3rem;
+  }
+
+  .experience-mobile .role .overview {
+    gap: 1rem;
+  }
+
+  .experience-mobile .role h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .experience-mobile .role .overview {
+    gap: 2rem;
+
+    & p {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ExperienceDesktop component will render at higher breakpoints */
