@@ -1,4 +1,4 @@
-.mobile .role {
+.experience-mobile .role {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -56,34 +56,34 @@
   }
 }
 
-.mobile .role .overview {
+.experience-mobile .role .overview {
   display: flex;
   align-items: center;
   text-align: start;
   gap: 0.5rem;
 }
 
-.mobile .role .details {
+.experience-mobile .role .details {
   display: flex;
   height: fit-content;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.mobile .role .overview img {
+.experience-mobile .role .overview img {
   width: var(--logo-size);
   height: var(--logo-size);
 }
 
-.mobile .role .details p {
+.experience-mobile .role .details p {
   font-size: 0.875rem;
 }
 
-.mobile .role .toggle-arrow {
+.experience-mobile .role .toggle-arrow {
   margin-left: auto;
 }
 
-.mobile .role .close-arrow {
+.experience-mobile .role .close-arrow {
   position: absolute;
   bottom: -1rem;
   left: 50%;
@@ -106,17 +106,17 @@
     --logo-size: 3rem;
   }
 
-  .mobile .role .overview {
+  .experience-mobile .role .overview {
     gap: 1rem;
   }
 
-  .mobile .role h4 {
+  .experience-mobile .role h4 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 540px) {
-  .mobile .role .overview {
+  .experience-mobile .role .overview {
     gap: 2rem;
 
     & p {
