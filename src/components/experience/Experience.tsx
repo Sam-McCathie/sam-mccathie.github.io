@@ -4,7 +4,7 @@ import "./Experience.css";
 
 export const Experience = () => {
   return (
-    <div className="experience">
+    <div id="experience">
       <h2>Experience</h2>
       <ExperienceMobile />
       <ExperienceDesktop />

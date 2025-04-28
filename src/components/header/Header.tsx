@@ -5,7 +5,6 @@ import { NavButtons, ThemeToggle } from "./components";
 import "./Header.css";
 
 export const Header = () => {
-  // TODO: Add scrolling from clicking nav buttons.
   return (
     <header>
       <div className="header-content">

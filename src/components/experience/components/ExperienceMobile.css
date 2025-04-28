@@ -102,7 +102,7 @@
 }
 
 @media (min-width: 375px) {
-  .experience {
+  #experience {
     --logo-size: 3rem;
   }
 

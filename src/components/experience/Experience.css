@@ -1,4 +1,4 @@
-.experience {
+#experience {
   --logo-size: 2.5rem;
 
   & h2 {
@@ -6,50 +6,50 @@
   }
 }
 
-.experience,
-.experience .roles {
+#experience,
+#experience .roles {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
-.experience .role {
+#experience .role {
   cursor: pointer;
 }
 
-.experience .experience-desktop {
+#experience .experience-desktop {
   display: none;
 }
 
-.experience .overview {
+#experience .overview {
   display: flex;
   align-items: center;
   text-align: start;
   gap: 0.5rem;
 }
 
-.experience .details {
+#experience .details {
   display: flex;
   height: fit-content;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.experience .overview img {
+#experience .overview img {
   width: var(--logo-size);
   height: var(--logo-size);
 }
 
-.experience .details p {
+#experience .details p {
   font-size: 0.875rem;
 }
 
-.experience .toggle-arrow {
+#experience .toggle-arrow {
   margin-left: auto;
 }
 
 @media (min-width: 768px) {
-  .experience {
+  #experience {
     & .mobile {
       display: none;
     }

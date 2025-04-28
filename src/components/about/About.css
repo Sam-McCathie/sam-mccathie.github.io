@@ -1,4 +1,4 @@
-.about {
+#about {
   --profile-width: 223px;
 
   display: flex;
@@ -6,12 +6,12 @@
   gap: 1rem;
 }
 
-.about :is(.headline, .profile) {
+#about :is(.headline, .profile) {
   display: flex;
   flex-direction: column;
 }
 
-.about .headline {
+#about .headline {
   justify-content: space-between;
   align-items: center;
   & h1 {
@@ -21,13 +21,13 @@
   }
 }
 
-.about .profile {
+#about .profile {
   gap: 1rem;
   align-items: center;
   flex-direction: column-reverse;
 }
 
-.about .profile .logo-links {
+#about .profile .logo-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,7 +44,7 @@
   }
 }
 
-.about .profile .frame {
+#about .profile .frame {
   width: var(--profile-width);
   height: 277px;
   overflow: hidden;
@@ -58,31 +58,31 @@
 }
 
 @media (min-width: 540px) {
-  .about .headline h1 {
+  #about .headline h1 {
     font-size: 3.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .about {
+  #about {
     gap: 2rem;
   }
 
-  .about .profile,
-  .about .headline {
+  #about .profile,
+  #about .headline {
     flex-direction: row;
   }
 
-  .about .headline h1 {
+  #about .headline h1 {
     text-align: start;
     font-size: 4rem;
   }
 
-  .about .profile .logo-links {
+  #about .profile .logo-links {
     flex-direction: column;
   }
 
-  .about .profile .logo-links {
+  #about .profile .logo-links {
     width: fit-content;
   }
 }
