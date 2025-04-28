@@ -7,7 +7,8 @@ import { Overview } from "./Overview";
 export const RoleMobile: FC<RoleProps> = ({ roleDescription, ...rest }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleRole = () => {
+  const toggleRole = (event: React.MouseEvent) => {
+    event?.stopPropagation();
     setIsOpen(!isOpen);
   };
 
