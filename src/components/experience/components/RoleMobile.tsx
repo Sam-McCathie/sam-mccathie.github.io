@@ -14,8 +14,11 @@ export const RoleMobile: FC<RoleProps> = ({ roleDescription, ...rest }) => {
   const containerState = isOpen ? "open" : "closed";
 
   return (
-    <div className={`role container mobile ${containerState}`}>
-      <Overview {...rest} onClick={toggleRole} />
+    <div
+      className={`role container mobile ${containerState}`}
+      onClick={toggleRole}
+    >
+      <Overview {...rest} />
       <Description roleDescription={roleDescription} />
       <button className="close-arrow" onClick={toggleRole}>
         <NavArrowSVG />

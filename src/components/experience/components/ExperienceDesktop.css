@@ -14,11 +14,7 @@
   }
 }
 
-.experience-desktop .description.container {
-  --role-container-total-height: 495px;
-  height: var(--role-container-total-height);
-}
-
-.experience-desktop ul {
-  gap: 0.15rem;
+.experience-desktop .details :is(.role, .duration) {
+  font-size: 1rem;
+  white-space: nowrap;
 }
