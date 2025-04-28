@@ -4,7 +4,7 @@ import { Carousel } from "./components/Carousel";
 
 export const Skills = () => {
   return (
-    <div className="skills container">
+    <div id="skills" className="container">
       <h2>Skills</h2>
       <h3>Technologies & Frameworks</h3>
       <SkillIcons />

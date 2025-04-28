@@ -1,34 +1,30 @@
-import React from "react";
 import { Button } from "@components";
+import React, { useEffect, useState } from "react";
+import { generateNavSections, handleScroll } from "../helpers";
+
+interface Section {
+  text: string;
+  id: string;
+  ariaLabel: string;
+}
 
 export const NavButtons = () => {
-  const handleScroll = (text: string) => () => {
-    console.log(`${text} clicked`);
-  };
+  const [sections, setSections] = useState<Section[]>([]);
 
-  /* Could extract this logic into a data map in future */
+  useEffect(() => {
+    setSections(generateNavSections());
+  }, []);
+
   return (
     <div className="nav-buttons">
-      <Button
-        text="About"
-        onClick={handleScroll("About")}
-        ariaLabel="Scroll to About section"
-      />
-      <Button
-        text="Skills"
-        onClick={handleScroll("Skills")}
-        ariaLabel="Scroll to Skills section"
-      />
-      <Button
-        text="Experience"
-        onClick={handleScroll("Experience")}
-        ariaLabel="Scroll to Experience section"
-      />
-      <Button
-        text="Projects"
-        onClick={handleScroll("Projects")}
-        ariaLabel="Scroll to Projects section"
-      />
+      {sections.map(({ text, id, ariaLabel }) => (
+        <Button
+          key={text}
+          text={text}
+          onClick={handleScroll(id)}
+          ariaLabel={ariaLabel}
+        />
+      ))}
     </div>
   );
 };
