@@ -5,7 +5,7 @@ import {
   Header,
   Skills,
   Experience,
-  ScrollToTopBtn,
+  ScrollUp,
   Footer,
 } from "@components";
 
@@ -19,7 +19,7 @@ export const Home = () => {
       <About />
       <Skills />
       <Experience />
-      <ScrollToTopBtn />
+      <ScrollUp />
       <Footer />
     </main>
   );

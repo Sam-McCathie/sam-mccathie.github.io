@@ -52,7 +52,7 @@ main {
 }
 
 /* Add footer to exceptions */
-main > *:not(header, footer) {
+main > *:not(header, footer, .scroll-up) {
   max-width: 800px;
   margin-inline: auto;
 }

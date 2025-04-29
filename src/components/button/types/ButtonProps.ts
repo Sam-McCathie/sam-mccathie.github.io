@@ -23,4 +23,15 @@ interface ButtonSvgProps extends BaseButtonProps {
   svg: React.ReactNode;
 }
 
-export type ButtonProps = ButtonTextProps | ButtonSvgProps;
+/**
+ * Props for Button component when both svg and text are used.
+ */
+interface ButtonCombinedProps extends BaseButtonProps {
+  text: string;
+  svg: React.ReactNode;
+}
+
+export type ButtonProps =
+  | ButtonTextProps
+  | ButtonSvgProps
+  | ButtonCombinedProps;
