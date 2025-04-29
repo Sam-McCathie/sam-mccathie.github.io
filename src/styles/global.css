@@ -49,11 +49,10 @@ main {
   transition: var(--default-transition);
   padding-inline: 1rem;
   padding-top: 1rem;
-  padding-bottom: 50px; /* temp when building out site */
 }
 
 /* Add footer to exceptions */
-main > *:not(header) {
+main > *:not(header, footer) {
   max-width: 800px;
   margin-inline: auto;
 }

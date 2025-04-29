@@ -1,6 +1,13 @@
 import React from "react";
 import { useTheme } from "@context";
-import { About, Header, Skills, Experience, ScrollToTopBtn } from "@components";
+import {
+  About,
+  Header,
+  Skills,
+  Experience,
+  ScrollToTopBtn,
+  Footer,
+} from "@components";
 
 /* Update location in future*/
 export const Home = () => {
@@ -13,6 +20,7 @@ export const Home = () => {
       <Skills />
       <Experience />
       <ScrollToTopBtn />
+      <Footer />
     </main>
   );
 };

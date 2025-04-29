@@ -5,3 +5,5 @@ export { Home } from "./pages";
 export { Skills } from "./skills";
 export { Experience } from "./experience";
 export { ScrollToTopBtn } from "./scroll-to-top-btn";
+export { LogoLinks } from "./logo-links";
+export { Footer } from "./footer";
