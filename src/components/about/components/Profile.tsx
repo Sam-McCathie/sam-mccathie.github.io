@@ -1,6 +1,6 @@
 import React from "react";
-import { LogoLinks } from "./LogoLinks";
 import { useTheme } from "@context";
+import { LogoLinks } from "@components";
 
 export const Profile = () => {
   const { theme } = useTheme();

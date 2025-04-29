@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  background-color: var(--element-background-color);
+  padding-block: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -1px 1px var(--drop-shadow-color),
+    0 4px 4px var(--drop-shadow-color);
+  border-radius: 50px 50px 0 0;
+}
+
+footer .logo-links {
+  display: flex;
+  gap: 1rem;
+}
+
+footer a {
+  font: 600 0.8rem/1.5 "Space Grotesk", sans-serif;
+  color: var(--primary-color);
+}

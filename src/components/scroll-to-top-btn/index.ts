@@ -1,1 +1,0 @@
-export { ScrollToTopBtn } from "./ScrollToTopBtn";
