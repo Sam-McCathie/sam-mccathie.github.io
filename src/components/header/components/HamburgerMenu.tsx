@@ -1,26 +1,46 @@
 import { Button } from "@components";
-import { CloseSVG } from "@svgs";
+import { CloseSVG, NavArrowSVG } from "@svgs";
 import React, { FC } from "react";
 import "./HamburgerMenu.css";
-import { ThemeToggle } from "./ThemeToggle";
 import { HeaderChildProps } from "./header-child-props";
+import { NavButtons } from "./NavButtons";
+import { ThemeToggle } from "./ThemeToggle";
+import { scrollToTop } from "@helpers";
 
 export const HamburgerMenu: FC<HeaderChildProps> = ({
   isHamburgerOpen,
-  onClick,
-  sections,
+  onClick: closeHamburger,
 }) => {
-  return (
-    isHamburgerOpen && (
-      <div className="hamburger">
-        <Button
-          svg={<CloseSVG />}
-          ariaLabel="Close hamburger"
-          onClick={onClick}
-        />
+  const active = isHamburgerOpen ? "active" : "";
 
-        <ThemeToggle />
+  const handleScrollToTop = () => {
+    scrollToTop();
+    closeHamburger();
+  };
+
+  return (
+    <>
+      <div
+        className={`background-opacity ${active}`}
+        onClick={closeHamburger}
+      ></div>
+      <div className={`hamburger-menu ${active}`}>
+        <div className="controls">
+          <ThemeToggle />
+          <Button
+            svg={<CloseSVG />}
+            ariaLabel="Close hamburger"
+            onClick={closeHamburger}
+          />
+        </div>
+        <NavButtons customFunction={closeHamburger} />
+        <Button
+          className="back-to-top"
+          svg={<NavArrowSVG />}
+          ariaLabel="Back to top"
+          onClick={handleScrollToTop}
+        />
       </div>
-    )
+    </>
   );
 };

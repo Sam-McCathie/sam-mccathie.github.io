@@ -1,26 +1,33 @@
-import { Section } from "@types";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HamburgerMenu, HeaderLayout } from "./components";
 import "./Header.css";
-import { generateNavSections } from "./helpers";
 
 export const Header = () => {
-  const [sections, setSections] = useState<Section[]>([]);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
   const toggleHamburgerMenu = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-  useEffect(() => {
-    setSections(generateNavSections());
-  }, []);
-
   const props = {
     isHamburgerOpen,
-    sections,
     onClick: toggleHamburgerMenu,
   };
+
+  React.useEffect(() => {
+    // handles case where user opens the hamburger, resizes above 768px then under 768px
+    // - Prevents the hamburger opening on its own.
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isHamburgerOpen) {
+        setIsHamburgerOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isHamburgerOpen]);
 
   return (
     <>

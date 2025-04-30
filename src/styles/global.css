@@ -28,6 +28,7 @@ main.light {
   --main-background-color: var(--gradient);
   --drop-shadow-color: rgba(0, 0, 0, 0.25);
   --disabled-color: var(--grey);
+  --background-opacity: rgba(50, 50, 50, 0.6);
 }
 
 /* dark mode */
@@ -38,6 +39,7 @@ main.dark {
   --main-background-color: var(--charcoal);
   --drop-shadow-color: rgb(238, 238, 238, 0.25);
   --disabled-color: var(--charcoal);
+  --background-opacity: rgba(50, 50, 50, 0.7);
 }
 
 main {

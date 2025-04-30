@@ -1,20 +1,31 @@
 import { Button } from "@components";
 import { Section } from "@types";
-import React, { FC } from "react";
-import { handleScroll } from "../helpers";
+import React, { FC, useEffect, useState } from "react";
+import { generateNavSections, handleScroll } from "../helpers";
 
 interface NavButtonsProps {
-  sections: Section[];
+  customFunction?: () => void;
 }
 
-export const NavButtons: FC<NavButtonsProps> = ({ sections }) => {
+export const NavButtons: FC<NavButtonsProps> = ({ customFunction }) => {
+  const [sections, setSections] = useState<Section[]>([]);
+
+  useEffect(() => {
+    setSections(generateNavSections());
+  }, []);
+
+  const handleOnClick = (id: string) => () => {
+    handleScroll(id);
+    customFunction && customFunction();
+  };
+
   return (
     <div className="nav-buttons">
       {sections.map(({ text, id, ariaLabel }) => (
         <Button
           key={text}
           text={text}
-          onClick={handleScroll(id)}
+          onClick={handleOnClick(id)}
           ariaLabel={ariaLabel}
         />
       ))}

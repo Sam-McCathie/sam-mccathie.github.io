@@ -5,15 +5,14 @@ import { Button } from "@components";
 import React, { FC } from "react";
 import { NavButtons } from "./NavButtons";
 import { ThemeToggle } from "./ThemeToggle";
+import "./HeaderLayout.css";
 
 interface HeaderLayoutProps {
-  sections: Section[];
   isHamburgerOpen: boolean;
   onClick: () => void;
 }
 export const HeaderLayout: FC<HeaderLayoutProps> = ({
   isHamburgerOpen /* could use this in future to show hide header while hamburger is open? */,
-  sections,
   onClick,
 }) => {
   return (
@@ -31,7 +30,7 @@ export const HeaderLayout: FC<HeaderLayoutProps> = ({
           className="name-nav"
           onClick={scrollToTop}
         />
-        <NavButtons sections={sections} />
+        <NavButtons />
         <ThemeToggle />
       </div>
     </header>
