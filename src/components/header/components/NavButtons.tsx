@@ -1,20 +1,13 @@
 import { Button } from "@components";
-import React, { useEffect, useState } from "react";
-import { generateNavSections, handleScroll } from "../helpers";
+import { Section } from "@types";
+import React, { FC } from "react";
+import { handleScroll } from "../helpers";
 
-interface Section {
-  text: string;
-  id: string;
-  ariaLabel: string;
+interface NavButtonsProps {
+  sections: Section[];
 }
 
-export const NavButtons = () => {
-  const [sections, setSections] = useState<Section[]>([]);
-
-  useEffect(() => {
-    setSections(generateNavSections());
-  }, []);
-
+export const NavButtons: FC<NavButtonsProps> = ({ sections }) => {
   return (
     <div className="nav-buttons">
       {sections.map(({ text, id, ariaLabel }) => (

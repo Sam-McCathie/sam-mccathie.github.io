@@ -1,11 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 import { HamburgerSVG } from "@svgs";
-import { Button } from "@components";
-import { NavButtons, ThemeToggle } from "./components";
+import { Button, ThemeToggle } from "@components";
+import { NavButtons } from "./components";
 import { scrollToTop } from "@helpers";
 import "./Header.css";
+import { Section } from "@types";
 
-export const Header = () => {
+interface HeaderProps {
+  sections: Section[];
+  toggleHamburgerMenu: () => void;
+}
+
+export const Header: FC<HeaderProps> = ({ toggleHamburgerMenu, sections }) => {
   return (
     <header>
       <div className="header-content">
@@ -13,7 +19,7 @@ export const Header = () => {
           svg={<HamburgerSVG />}
           ariaLabel="Open Menu"
           className="hamburger"
-          onClick={() => alert("Menu clicked")}
+          onClick={toggleHamburgerMenu}
         />
         <Button
           text="Sam McCathie"
@@ -21,7 +27,7 @@ export const Header = () => {
           className="name-nav"
           onClick={scrollToTop}
         />
-        <NavButtons />
+        <NavButtons sections={sections} />
         <ThemeToggle />
       </div>
     </header>
