@@ -1,5 +1,5 @@
 import { Button } from "@components";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { generateNavSections, handleScroll } from "../helpers";
 
 interface Section {
@@ -8,12 +8,21 @@ interface Section {
   ariaLabel: string;
 }
 
-export const NavButtons = () => {
+interface NavButtonsProps {
+  customFunction?: () => void;
+}
+
+export const NavButtons: FC<NavButtonsProps> = ({ customFunction }) => {
   const [sections, setSections] = useState<Section[]>([]);
 
   useEffect(() => {
     setSections(generateNavSections());
   }, []);
+
+  const handleOnClick = (id: string) => () => {
+    handleScroll(id);
+    customFunction && customFunction();
+  };
 
   return (
     <div className="nav-buttons">
@@ -21,7 +30,7 @@ export const NavButtons = () => {
         <Button
           key={text}
           text={text}
-          onClick={handleScroll(id)}
+          onClick={handleOnClick(id)}
           ariaLabel={ariaLabel}
         />
       ))}

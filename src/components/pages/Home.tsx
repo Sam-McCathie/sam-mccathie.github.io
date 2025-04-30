@@ -1,13 +1,13 @@
-import React from "react";
-import { useTheme } from "@context";
 import {
   About,
-  Header,
-  Skills,
   Experience,
-  ScrollUp,
   Footer,
+  Header,
+  ScrollUp,
+  Skills,
 } from "@components";
+import { useTheme } from "@context";
+import React from "react";
 
 /* Update location in future*/
 export const Home = () => {

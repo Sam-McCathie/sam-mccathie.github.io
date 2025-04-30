@@ -1,29 +1,36 @@
-import React from "react";
-import { HamburgerSVG } from "@svgs";
-import { Button } from "@components";
-import { NavButtons, ThemeToggle } from "./components";
-import { scrollToTop } from "@helpers";
+import React, { useEffect, useState } from "react";
+import { HamburgerMenu, HeaderLayout } from "./components";
 import "./Header.css";
 
 export const Header = () => {
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+  const toggleHamburgerMenu = () => {
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
+
+  useEffect(() => {
+    // handles case where user opens the hamburger, resizes above 768px then under 768px
+    // - Prevents the hamburger opening on its own.
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isHamburgerOpen) {
+        setIsHamburgerOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isHamburgerOpen]);
+
   return (
-    <header>
-      <div className="header-content">
-        <Button
-          svg={<HamburgerSVG />}
-          ariaLabel="Open Menu"
-          className="hamburger"
-          onClick={() => alert("Menu clicked")}
-        />
-        <Button
-          text="Sam McCathie"
-          ariaLabel="Navigate to top of page"
-          className="name-nav"
-          onClick={scrollToTop}
-        />
-        <NavButtons />
-        <ThemeToggle />
-      </div>
-    </header>
+    <>
+      <HeaderLayout onClick={toggleHamburgerMenu} />
+      <HamburgerMenu
+        isHamburgerOpen={isHamburgerOpen}
+        onClick={toggleHamburgerMenu}
+      />
+    </>
   );
 };

@@ -1,4 +1,4 @@
-export const handleScroll = (sectionId: string) => () => {
+export const handleScroll = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {
     const offset = 70;
