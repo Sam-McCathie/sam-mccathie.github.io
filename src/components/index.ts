@@ -7,5 +7,3 @@ export { Experience } from "./experience";
 export { ScrollUp } from "./scroll-up";
 export { LogoLinks } from "./logo-links";
 export { Footer } from "./footer";
-export { ThemeToggle } from "./theme-toggle";
-export { HamburgerMenu } from "./hamburger-menu";

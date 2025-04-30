@@ -1,27 +1,22 @@
+import { Button } from "@components";
 import { CloseSVG } from "@svgs";
-import { Button, ThemeToggle } from "@components";
 import React, { FC } from "react";
 import "./HamburgerMenu.css";
-import { Section } from "@types";
+import { ThemeToggle } from "./ThemeToggle";
+import { HeaderChildProps } from "./header-child-props";
 
-interface HamburgerMenuProps {
-  sections: Section[];
-  isOpen: boolean;
-  closeMenu: () => void;
-}
-
-export const HamburgerMenu: FC<HamburgerMenuProps> = ({
-  isOpen,
-  closeMenu,
+export const HamburgerMenu: FC<HeaderChildProps> = ({
+  isHamburgerOpen,
+  onClick,
   sections,
 }) => {
   return (
-    isOpen && (
+    isHamburgerOpen && (
       <div className="hamburger">
         <Button
           svg={<CloseSVG />}
           ariaLabel="Close hamburger"
-          onClick={closeMenu}
+          onClick={onClick}
         />
 
         <ThemeToggle />
