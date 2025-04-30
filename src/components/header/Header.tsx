@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HamburgerMenu, HeaderLayout } from "./components";
 import "./Header.css";
 
@@ -9,12 +9,7 @@ export const Header = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-  const props = {
-    isHamburgerOpen,
-    onClick: toggleHamburgerMenu,
-  };
-
-  React.useEffect(() => {
+  useEffect(() => {
     // handles case where user opens the hamburger, resizes above 768px then under 768px
     // - Prevents the hamburger opening on its own.
     const handleResize = () => {
@@ -31,8 +26,11 @@ export const Header = () => {
 
   return (
     <>
-      <HeaderLayout {...props} />
-      <HamburgerMenu {...props} />
+      <HeaderLayout onClick={toggleHamburgerMenu} />
+      <HamburgerMenu
+        isHamburgerOpen={isHamburgerOpen}
+        onClick={toggleHamburgerMenu}
+      />
     </>
   );
 };

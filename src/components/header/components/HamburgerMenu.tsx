@@ -1,13 +1,17 @@
 import { Button } from "@components";
+import { scrollToTop } from "@helpers";
 import { CloseSVG, NavArrowSVG } from "@svgs";
 import React, { FC } from "react";
 import "./HamburgerMenu.css";
-import { HeaderChildProps } from "./header-child-props";
 import { NavButtons } from "./NavButtons";
 import { ThemeToggle } from "./ThemeToggle";
-import { scrollToTop } from "@helpers";
 
-export const HamburgerMenu: FC<HeaderChildProps> = ({
+interface HamburgerMenuProps {
+  onClick: () => void;
+  isHamburgerOpen: boolean;
+}
+
+export const HamburgerMenu: FC<HamburgerMenuProps> = ({
   isHamburgerOpen,
   onClick: closeHamburger,
 }) => {

@@ -1,7 +1,12 @@
 import { Button } from "@components";
-import { Section } from "@types";
 import React, { FC, useEffect, useState } from "react";
 import { generateNavSections, handleScroll } from "../helpers";
+
+interface Section {
+  text: string;
+  id: string;
+  ariaLabel: string;
+}
 
 interface NavButtonsProps {
   customFunction?: () => void;

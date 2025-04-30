@@ -1,26 +1,21 @@
+import { Button } from "@components";
 import { scrollToTop } from "@helpers";
 import { HamburgerSVG } from "@svgs";
-import { Section } from "@types";
-import { Button } from "@components";
 import React, { FC } from "react";
+import "./HeaderLayout.css";
 import { NavButtons } from "./NavButtons";
 import { ThemeToggle } from "./ThemeToggle";
-import "./HeaderLayout.css";
 
 interface HeaderLayoutProps {
-  isHamburgerOpen: boolean;
   onClick: () => void;
 }
-export const HeaderLayout: FC<HeaderLayoutProps> = ({
-  isHamburgerOpen /* could use this in future to show hide header while hamburger is open? */,
-  onClick,
-}) => {
+export const HeaderLayout: FC<HeaderLayoutProps> = ({ onClick }) => {
   return (
     <header>
       <div className="header-content">
         <Button
           svg={<HamburgerSVG />}
-          ariaLabel="Open Menu"
+          ariaLabel="Open hamburger menu"
           className="hamburger"
           onClick={onClick}
         />
