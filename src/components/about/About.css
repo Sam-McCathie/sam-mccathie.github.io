@@ -27,23 +27,6 @@
   flex-direction: column-reverse;
 }
 
-#about .profile .logo-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-  width: var(--profile-width);
-
-  & a,
-  button {
-    background-color: unset;
-  }
-
-  & :is(a, button):hover {
-    background-color: var(--element-background-color);
-  }
-}
-
 #about .profile .frame {
   width: var(--profile-width);
   height: 277px;

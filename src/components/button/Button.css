@@ -7,7 +7,7 @@ a:has(svg) {
   padding: 0.25rem 1rem;
   font: 500 1rem/1.5 "Ubuntu", sans-serif;
   cursor: pointer;
-  transition: var(--default-transition);
+  transition: var(--fast-transition);
 
   &:not(:disabled):is(:hover, :active) {
     box-shadow: 0 4px 8px var(--drop-shadow-color);
