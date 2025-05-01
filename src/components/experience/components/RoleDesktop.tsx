@@ -9,7 +9,7 @@ interface RoleProps extends Role {
 
 export const RoleDesktop: FC<RoleProps> = (props) => (
   <div
-    className={`role container ${props.isActive ? "active" : ""}`}
+    className={`role container hover-animate ${props.isActive ? "active" : ""}`}
     onClick={props.onClick}
   >
     <Overview {...props} />

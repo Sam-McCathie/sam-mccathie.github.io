@@ -16,7 +16,7 @@ export const RoleMobile: FC<RoleProps> = ({ roleDescription, ...rest }) => {
 
   return (
     <div
-      className={`role container mobile ${containerState}`}
+      className={`role container hover-animate mobile ${containerState}`}
       onClick={toggleRole}
     >
       <Overview {...rest} />

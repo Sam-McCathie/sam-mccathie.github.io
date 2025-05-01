@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { HamburgerMenu, HeaderLayout } from "./components";
-import "./Header.css";
 
 export const Header = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);

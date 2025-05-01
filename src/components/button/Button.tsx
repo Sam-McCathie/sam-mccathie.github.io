@@ -13,7 +13,11 @@ export const Button: React.FC<ButtonProps> = ({
   ariaLabel,
 }) => {
   return (
-    <button onClick={onClick} className={className} aria-label={ariaLabel}>
+    <button
+      onClick={onClick}
+      className={`hover-animate ${className}`}
+      aria-label={ariaLabel}
+    >
       {text}
       {svg}
     </button>

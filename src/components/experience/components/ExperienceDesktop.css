@@ -8,7 +8,7 @@
 
 .experience-desktop .role,
 .experience-desktop .role button {
-  transition: var(--default-transition);
+  transition: var(--fast-transition);
 }
 
 .experience-desktop .role,
@@ -22,6 +22,7 @@
 
 .experience-desktop .role.active {
   background-color: var(--element-background-color);
+  pointer-events: none;
 }
 
 .experience-desktop .role .overview {

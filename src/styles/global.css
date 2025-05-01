@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:wght@300;400;500;700&display=swap");
+
 :root {
   /* Colors */
   --off-white: #faf9f6;
@@ -15,6 +16,7 @@
 
   /* Animations */
   --default-transition: all 0.5s ease;
+  --fast-transition: all 0.4s ease;
 }
 
 /* light mode */
@@ -125,6 +127,13 @@ li {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.hover-animate:hover {
+  background-color: var(--element-background-color);
+  transform: translateY(-2px);
+  box-shadow: 0 -1px 2px var(--drop-shadow-color),
+    0 6px 6px var(--drop-shadow-color);
 }
 
 @media (min-width: 768px) {
