@@ -40,8 +40,15 @@
   height: var(--logo-size);
 }
 
-#experience .details p {
-  font-size: 0.875rem;
+#experience .details {
+  & .position {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  & .duration {
+    font-size: 0.875rem;
+  }
 }
 
 #experience .toggle-arrow {
