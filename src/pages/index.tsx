@@ -1,6 +1,6 @@
 import React from "react";
 import { type HeadFC } from "gatsby";
-import { ThemeProvider } from "@context";
+import { ScrollProvider, ThemeProvider } from "@context";
 import { Home } from "@components";
 
 const IndexPage = () => {
@@ -9,9 +9,11 @@ const IndexPage = () => {
    */
 
   return (
-    <ThemeProvider>
-      <Home />
-    </ThemeProvider>
+    <ScrollProvider>
+      <ThemeProvider>
+        <Home />
+      </ThemeProvider>
+    </ScrollProvider>
   );
 };
 

@@ -12,6 +12,10 @@ header {
   transition: var(--default-transition);
 }
 
+header[data-scrolled] {
+  border-radius: 0 0 2rem 2rem;
+}
+
 /* header-content required for large breakpoints to position header elements correctly */
 .header-content {
   display: flex;

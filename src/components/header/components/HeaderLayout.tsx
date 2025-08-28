@@ -5,13 +5,16 @@ import React, { FC } from "react";
 import "./HeaderLayout.css";
 import { NavButtons } from "./NavButtons";
 import { ThemeToggle } from "./ThemeToggle";
+import { useScroll } from "@context";
 
 interface HeaderLayoutProps {
   onClick: () => void;
 }
 export const HeaderLayout: FC<HeaderLayoutProps> = ({ onClick }) => {
+  const { isAtTop } = useScroll();
+
   return (
-    <header>
+    <header data-scrolled={!isAtTop || null}>
       <div className="header-content">
         <Button
           svg={<HamburgerSVG />}
