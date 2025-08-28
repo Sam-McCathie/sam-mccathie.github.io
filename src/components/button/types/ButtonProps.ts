@@ -2,6 +2,7 @@ interface BaseButtonProps {
   onClick: () => void;
   ariaLabel: string;
   className?: string;
+  disabled?: boolean;
 }
 
 /**

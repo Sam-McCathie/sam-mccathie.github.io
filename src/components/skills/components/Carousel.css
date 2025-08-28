@@ -6,7 +6,6 @@
 }
 
 .carousel button:has(svg) {
-  background-color: unset;
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
@@ -16,7 +15,7 @@
     height: 3rem;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--element-background-color);
   }
 }
@@ -48,6 +47,12 @@
   box-sizing: border-box;
   width: var(--item-size);
   height: var(--item-size);
+}
+
+@media (min-width: 400px) {
+  .carousel .content {
+    --items: 3;
+  }
 }
 
 @media (min-width: 540px) {

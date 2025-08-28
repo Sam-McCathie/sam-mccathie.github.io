@@ -21,6 +21,7 @@ a:has(svg) {
     background-color: var(--disabled-color);
     box-shadow: none !important;
     cursor: not-allowed;
+    pointer-events: none;
   }
 
   &:has(svg) {

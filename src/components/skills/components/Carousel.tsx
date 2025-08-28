@@ -9,8 +9,36 @@ const itemWidth = 72; // .skill-icon width + .content gap
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the starting index of visible items in dynamicArray
-
   const [visibleItems, setVisibleItems] = useState(2);
+
+  // Variables for swipe detection
+  const [startX, setStartX] = useState<number | null>(null);
+  const [endX, setEndX] = useState<number | null>(null);
+
+  // Swipe handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setEndX(e.touches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (startX !== null && endX !== null) {
+      const diff = startX - endX;
+      if (diff > 50) {
+        // Swipe left
+        onNext();
+      } else if (diff < -50) {
+        // Swipe right
+        onPrevious();
+      }
+    }
+    // Reset swipe state
+    setStartX(null);
+    setEndX(null);
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -27,7 +55,7 @@ export const Carousel = () => {
     }
   }, []);
 
-  const next = () => {
+  const onNext = () => {
     setCurrentIndex((prevIndex) => {
       const nextIndex = prevIndex + 1;
       // Check if there are enough items to fill the visible area
@@ -38,7 +66,7 @@ export const Carousel = () => {
     });
   };
 
-  const previous = () => {
+  const onPrevious = () => {
     setCurrentIndex((prevIndex) => {
       const prevIndexAdjusted = prevIndex - 1;
       // Check if going back leaves enough items to fill the visible area
@@ -50,10 +78,15 @@ export const Carousel = () => {
   };
 
   return (
-    <div className="carousel">
+    <div
+      className="carousel"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <Button
         svg={<NavArrowSVG />}
-        onClick={previous}
+        onClick={onPrevious}
         ariaLabel="Navigate previous tool"
         className="previous"
       />
@@ -75,7 +108,7 @@ export const Carousel = () => {
       </div>
       <Button
         svg={<NavArrowSVG />}
-        onClick={next}
+        onClick={onNext}
         ariaLabel="Navigate next tool"
         className="next"
       />
