@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/favicon-32x32.png",
+        icon: "static/icon.png",
       },
     },
   ],
