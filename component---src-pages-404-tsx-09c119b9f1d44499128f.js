@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksam_mccathie_github_io=self.webpackChunksam_mccathie_github_io||[]).push([[453],{731:function(e,a,t){t.r(a);var u=t(4794),c=t(6540);a.default=()=>((0,c.useEffect)((()=>{(0,u.navigate)("/")}),[]),null)}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-09c119b9f1d44499128f.js.map
